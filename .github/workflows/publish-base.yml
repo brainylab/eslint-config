@@ -1,4 +1,4 @@
-name: CI-Publish Eslint Config Base
+name: CI - Publish Eslint Config Base
 
 on:
   push:
@@ -12,21 +12,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: NodeJs Evironment
         uses: actions/setup-node@v3.2.0
         with:
           node-version: 16
-          
+
       - name: Oepn Folder
         run: cd packages/base
-      
+
       - name: Publish to GPR
         run: npm config set '//https://npm.pkg.github.com/:_authToken' "${{ secrets.PUBLISH_TOKEN_GRP }}" && npm publish
-        
-      
+
+
       - name: Publish to NPM
         run: npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}" && npm publish
-      
+
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN_GRP}}
