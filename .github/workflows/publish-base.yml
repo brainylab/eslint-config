@@ -29,6 +29,4 @@ jobs:
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Publish Packages
-        run: "cd packages/base
-        | npm run publish-grp
-        | npm run publish-npm"
+        run: cd packages/base && npm run publish-grp && npm publish --access public --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'
