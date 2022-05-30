@@ -1,5 +1,5 @@
 ## BrainyLab eslint-config
-this is the base configuration of ESLint is used in the Projects made by BrainyLab Desenvolvimentos.
+this is the base configuration of ESLint is used in the Projects made by BrainyLab Development.
 
 ## Install Config
 
@@ -32,6 +32,7 @@ create ou alter `.vscode/settings.json`.
     "source.fixAll.eslint": true
   }
 }
+```
 
 ## License
 
