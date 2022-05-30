@@ -30,5 +30,5 @@ jobs:
 
       - name: Publish Packages
         run: "cd packages/base
-        | npm publish-grp
-        | npm publish-npm"
+        | npm run publish-grp
+        | npm run publish-npm"
