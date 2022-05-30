@@ -8,7 +8,7 @@ on:
       - 'packages/base/**'
 
 jobs:
-  publish-gpr:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,15 +19,14 @@ jobs:
         with:
           node-version: 16
 
-      - name: Oepn Folder
-        run: cd packages/base
+      - name: Set package registry
+        run: npm config set registry https://npm.pkg.github.com
 
-      - name: Publish to GPR
-        run: npm config set '//https://npm.pkg.github.com/:_authToken' "${{ secrets.PUBLISH_TOKEN_GRP }}" && npm publish
+      - name: Github package registry authentication
+        run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.PUBLISH_TOKEN_GRP }}
 
+      - name: Npm registry authentication
+        run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
-      - name: Publish to NPM
-        run: npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}" && npm publish
-
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN_GRP}}
+      - name: Open Folder
+        run: cd packages/base && npm publish
