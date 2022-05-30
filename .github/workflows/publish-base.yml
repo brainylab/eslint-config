@@ -2,9 +2,10 @@ name: CI - Publish Eslint Config Base
 
 on:
   push:
-    branches: master
+    branches:
+      - master
     paths:
-      - 'packages/base'
+      - 'packages/base/**'
 
 jobs:
   publish-gpr:
