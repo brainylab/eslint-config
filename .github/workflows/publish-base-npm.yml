@@ -19,14 +19,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: Set package registry
-        run: npm config set registry https://npm.pkg.github.com
-
-      - name: Github package registry authentication
-        run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.PUBLISH_TOKEN_GRP }}
-
       - name: Npm registry authentication
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Publish Packages
-        run: cd packages/base && npm publish && npm publish --access public --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'
+        run: cd packages/base && npm publish'
