@@ -1,4 +1,4 @@
-name: CI - Publish Eslint Config Base
+name: CI - Publish NPM Eslint Config Base
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: NodeJs Evironment
+      - name: NodeJs Environment
         uses: actions/setup-node@v3.2.0
         with:
           node-version: 16
@@ -23,4 +23,4 @@ jobs:
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Publish Packages
-        run: cd packages/base && npm publish'
+        run: cd packages/base && npm publish
