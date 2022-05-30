@@ -1,0 +1,36 @@
+name: CI-Publish-GPR
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - run: yarn install
+
+      # set up git since we will later push to the repo
+      - run: git config --global user.name "GitHub CD bot"
+      - run: git config --global user.email "dev@brainylab.com.br"
+
+      - run: npm version ${{ github.event.release.tag_name }}
+
+      - run: npm run build
+      - run: npm run test
+      - run: npm config set '//https://npm.pkg.github.com/:_authToken' "${{ secrets.PUBLISH_TOKEN_GRP }}"
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN_GRP}}
+      - run: git push
+        env:
+          # The secret is passed automatically. Nothing to configure.
+          github-token: ${{ secrets.GITHUB_TOKEN }}
