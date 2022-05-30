@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Publish to GPR
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3.2.0
         with:
           node-version: 16
 
@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Publish to NPM
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3.2.0
         with:
           node-version: 16
 
