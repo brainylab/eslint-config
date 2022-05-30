@@ -7,6 +7,7 @@ module.exports = {
   reportUnusedDisableDirectives: true,
   extends: [
     "airbnb-base",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended",
@@ -21,17 +22,6 @@ module.exports = {
     camelcase: "off",
     "prettier/prettier": "error",
     "import/no-unresolved": "error",
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        selector: "interface",
-        format: ["PascalCase"],
-        custom: {
-          regex: "^I[A-Z]",
-          match: true,
-        },
-      },
-    ],
     "class-methods-use-this": "off",
     "import/prefer-default-export": "off",
     "no-shadow": "off",
@@ -65,6 +55,17 @@ module.exports = {
     "import/no-extraneous-dependencies": [
       "error",
       { devDependencies: ["**/*.spec.js"] },
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        selector: "interface",
+        format: ["PascalCase"],
+        custom: {
+          regex: "^I[A-Z]",
+          match: true,
+        },
+      },
     ],
   },
   settings: {
