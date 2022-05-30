@@ -2,5 +2,25 @@
   "name": "@brainylab/eslint-config",
   "version": "0.1.0",
   "private": true,
-  "license": "MIT"
+  "author": {
+    "name": "André Felipe Schulle",
+    "email": "dev@brainylab.com.br"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "pub": "lerna publish",
+    "bump": "lerna version",
+    "test": "lerna run test",
+    "commit": "cz",
+    "postcommit": "git push"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.16.0",
+    "lerna": "^5.0.0",
+    "typescript": "^4.7.2"
+  }
 }

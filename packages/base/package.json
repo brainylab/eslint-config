@@ -1,0 +1,29 @@
+{
+  "name": "@brainylab/eslint-config-base",
+  "version": "0.2.0",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "brainylab"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainylab/eslint-config"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  }
+}
