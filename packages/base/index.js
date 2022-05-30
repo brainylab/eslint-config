@@ -53,14 +53,9 @@ module.exports = {
         // example configuration
         newlinesBetween: "always",
         groups: [
-          [
-            "/^@shared/",
-            "/^@core/",
-            "/^@modules/",
-            "/^@config/",
-            "/^@components/",
-          ],
-          ["/^@utils/", "/^@service/"],
+          "module",
+          ["/^@shared/", "/^@core/", "/^@modules/"],
+          ["/^@utils/", "/^@service/", "/^@config/"],
           ["/^@interfaces/"],
           ["parent", "sibling", "index"],
         ],
