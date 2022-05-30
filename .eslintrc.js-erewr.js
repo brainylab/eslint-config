@@ -1,10 +1,9 @@
 module.exports = {
   env: {
-    es2020: true,
+    es2021: true,
     node: true,
     jest: true,
   },
-  reportUnusedDisableDirectives: true,
   extends: [
     "airbnb-base",
     "plugin:@typescript-eslint/recommended",
@@ -18,9 +17,10 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   rules: {
-    camelcase: "off",
     "prettier/prettier": "error",
+    camelcase: "off",
     "import/no-unresolved": "error",
+    "@typescript-eslint/array-callback-return": "off",
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -43,8 +43,29 @@ module.exports = {
       "error",
       "ignorePackages",
       {
-        js: "never",
         ts: "never",
+      },
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        newlinesBetween: "always",
+        groups: ["module", "/^@shared/", ["parent", "sibling", "index"]],
+        alphabetize: { order: "asc", ignoreCase: true },
+      },
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { devDependencies: ["**/*.spec.js"] },
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        ts: "never",
+        tsx: "never",
+        js: "never",
+        jsx: "never",
       },
     ],
     "import-helpers/order-imports": [
@@ -53,23 +74,16 @@ module.exports = {
         // example configuration
         newlinesBetween: "always",
         groups: [
-          [
-            "/^@shared/",
-            "/^@core/",
-            "/^@modules/",
-            "/^@config/",
-            "/^@components/",
-          ],
+          "/^react/",
+          ["module", "/^@unform/"],
+          ["/^@hooks/"],
+          ["/^@shared/", "/^@modules/", "/^@config/", "/^@components/"],
           ["/^@utils/", "/^@service/"],
           ["/^@interfaces/"],
           ["parent", "sibling", "index"],
         ],
         alphabetize: { order: "asc", ignoreCase: true },
       },
-    ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      { devDependencies: ["**/*.spec.js"] },
     ],
   },
   settings: {
