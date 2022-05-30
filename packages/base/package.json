@@ -1,10 +1,10 @@
 {
   "name": "@brainylab/eslint-config-base",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "postpublish": "npm run publish-npm",
+    "publish-grp": "npm run publish-npm",
     "publish-npm": "npm publish --access public --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'"
   },
   "keywords": [

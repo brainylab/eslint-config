@@ -28,5 +28,7 @@ jobs:
       - name: Npm registry authentication
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
-      - name: Open Folder
-        run: cd packages/base && npm publish
+      - name: Publish Packages
+        run: "cd packages/base
+        | npm publish-grp
+        | npm publish-npm"
