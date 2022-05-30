@@ -3,11 +3,11 @@ name: CI-Publish Eslint Config Base
 on:
   push:
     branches: master
-  paths:
+    paths:
       - 'packages/base'
 
 jobs:
-  publish:
+  publish-gpr:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,9 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN_GRP}}
+
+  publish-npm:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Publish to NPM
