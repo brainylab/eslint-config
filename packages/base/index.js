@@ -22,12 +22,13 @@ module.exports = {
     'prettier/prettier': 'error',
     'import/no-unresolved': 'error',
     'class-methods-use-this': 'off',
-    'import/prefer-default-export': 'off',
     'no-shadow': 'off',
     'no-console': 'off',
     'no-useless-constructor': 'off',
     'no-empty-function': 'off',
     'lines-between-class-members': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': ['off', { devDependencies: ['*.js'] }],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -51,10 +52,6 @@ module.exports = {
         alphabetize: { order: 'asc', ignoreCase: true },
       },
     ],
-    'import/no-extraneous-dependencies': [
-      'error',
-      { devDependencies: ['**/*.spec.js'] },
-    ],
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -67,6 +64,14 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
   settings: {
     'import/resolver': {
       typescript: {
