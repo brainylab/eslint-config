@@ -1,3 +1,3 @@
-const eslintConfig = require("@brainylab/eslint-config-base");
+const eslintConfig = require('@brainylab/eslint-config-react');
 
 module.exports = eslintConfig;

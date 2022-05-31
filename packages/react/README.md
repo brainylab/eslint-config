@@ -1,16 +1,16 @@
 ## BrainyLab eslint-config
-this is the base configuration of ESLint is used in the Projects made by BrainyLab Development.
+this is the react configuration of ESLint is used in the Projects made by BrainyLab Development.
 
 ## Install Config
 
 ### usage npm
 ```bash
-npm i --save-dev eslint @brainylab/eslint-config-base
+npm i --save-dev eslint @brainylab/eslint-config-react
 ```
 
 ### usage yarn
 ```bash
-yarn add -D eslint @brainylab/eslint-config-base
+yarn add -D eslint @brainylab/eslint-config-react
 ```
 ## Usage Config
 
@@ -18,7 +18,7 @@ create file .eslintrc.js in main project folder, add the lines below in the file
 
 ```js
 module.exports = {
-  extends: ['@brainylab/eslint-config-base'],
+  extends: ['@brainylab/eslint-config-react'],
 };
 ```
 ### Config VS Code to auto fix

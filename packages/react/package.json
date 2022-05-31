@@ -1,0 +1,22 @@
+{
+  "name": "@brainylab/eslint-config-react",
+  "version": "0.1.5",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "react",
+    "brainylab"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainylab/eslint-config"
+  },
+  "dependencies": {
+    "@brainylab/eslint-config-base": "^0.2.21",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0"
+  }
+}
