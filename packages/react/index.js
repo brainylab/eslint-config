@@ -18,6 +18,29 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     'react/jsx-filename-extension': [2, { extensions: ['.tsx', '.jsx'] }],
+    'import-helpers/order-imports': [
+      'warn',
+      {
+        // example configuration
+        newlinesBetween: 'always',
+        groups: [
+          '/^react/',
+          ['module', '/^@unform/'],
+          ['/^@hooks/'],
+          [
+            '/^@shared/',
+            '/^@core/',
+            '/^@modules/',
+            '/^@config/',
+            '/^@components/',
+          ],
+          ['/^@utils/', '/^@service/'],
+          ['/^@interfaces/'],
+          ['parent', 'sibling', 'index'],
+        ],
+        alphabetize: { order: 'asc', ignoreCase: true },
+      },
+    ],
     'import/extensions': [
       'error',
       'ignorePackages',
