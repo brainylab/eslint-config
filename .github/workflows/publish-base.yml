@@ -26,7 +26,7 @@ jobs:
         run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.PUBLISH_TOKEN_GRP }}
 
       - name: Publish Packages on GRP
-        run: cd packages/base && npm publish
+        run: cd packages/base && npm publish --access public
 
   publish-npm:
     runs-on: ubuntu-latest
@@ -43,5 +43,5 @@ jobs:
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Publish Packages on NPM
-        run: cd packages/base && npm publish
+        run: cd packages/base && npm publish --access public
 
