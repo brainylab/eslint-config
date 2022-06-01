@@ -20,13 +20,14 @@ module.exports = {
   rules: {
     camelcase: 'off',
     'prettier/prettier': 'error',
-    'import/no-unresolved': 'error',
     'class-methods-use-this': 'off',
     'no-shadow': 'off',
     'no-console': 'off',
     'no-useless-constructor': 'off',
     'no-empty-function': 'off',
     'lines-between-class-members': 'off',
+    'import/no-duplicates': 'off',
+    'import/no-unresolved': 'error',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': ['off', { devDependencies: ['*.js'] }],
     'import/extensions': [
