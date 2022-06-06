@@ -17,6 +17,7 @@ module.exports = {
   plugins: ['react', 'react-hooks'],
   rules: {
     'no-nested-ternary': 'off',
+    "no-unused-expressions": "off",
     'react/prop-types': 'off',
     'react/jsx-filename-extension': [2, { extensions: ['.tsx', '.jsx'] }],
     'import-helpers/order-imports': [
