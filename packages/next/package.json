@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config-next",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
@@ -15,6 +15,7 @@
     "url": "git+https://github.com/brainylab/eslint-config"
   },
   "dependencies": {
-    "eslint-config-next": "^12.1.6"
+    "eslint-config-next": "^12.1.6",
+    "eslint-plugin-import-helpers": "^1.2.1"
   }
 }
