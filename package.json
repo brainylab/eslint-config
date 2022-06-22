@@ -18,8 +18,10 @@
     "pub": "lerna publish",
     "bump": "lerna version",
     "test": "lerna run test",
-    "commit": "cz",
-    "postcommit": "git push"
+    "commit:add": "git add .",
+    "commit:detail": "cz",
+    "commit:push": "git push",
+    "commit": "yarn commit:add && yarn commit:detail && yarn commit:push"
   },
   "devDependencies": {
     "commitizen": "^4.2.4",

@@ -1,0 +1,20 @@
+{
+  "name": "@brainylab/eslint-config-next",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "react",
+    "next",
+    "brainylab"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainylab/eslint-config"
+  },
+  "dependencies": {
+    "eslint-config-next": "^12.1.6"
+  }
+}

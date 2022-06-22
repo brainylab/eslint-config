@@ -1,0 +1,47 @@
+name: CI - Publish Eslint Config Next
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'packages/next/**'
+
+jobs:
+  publish-grp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: NodeJs Environment
+        uses: actions/setup-node@v3.2.0
+        with:
+          node-version: 16
+
+      - name: Set package registry GRP
+        run: npm config set registry https://npm.pkg.github.com
+
+      - name: Github package registry authentication
+        run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.PUBLISH_TOKEN_GRP }}
+
+      - name: Publish Packages on GRP
+        run: cd packages/react && npm publish --access public
+
+  publish-npm:
+    runs-on: ubuntu-latest
+    needs: [publish-grp]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: NodeJs Environment
+        uses: actions/setup-node@v3.2.0
+        with:
+          node-version: 16
+
+      - name: Npm registry authentication
+        run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish Packages on NPM
+        run: cd packages/react && npm publish --access public
+
