@@ -1,4 +1,4 @@
-name: CI - Publish Eslint Config Next
+name: CI - Publish Eslint Config NextJs
 
 on:
   push:
