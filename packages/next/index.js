@@ -1,5 +1,6 @@
 module.exports = {
   extends: ['next'],
+  plugins: ['eslint-plugin-import-helpers'],
   rules: {
     'import-helpers/order-imports': [
       'warn',
