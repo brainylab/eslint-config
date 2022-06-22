@@ -7,9 +7,8 @@ module.exports = {
       {
         newlinesBetween: 'always',
         groups: [
-          '/^react/',
-          ['module'],
-          ['/^hooks/'],
+          ['/^react/', '/^next/'],
+          ['/^hooks/', '/^contexts/'],
           ['/^shared/', '/^core/', '/^modules/', '/^config/', '/^components/'],
           ['/^utils/', '/^service/'],
           ['/^interfaces/'],
