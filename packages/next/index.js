@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint-config-next'],
+  extends: ['next'],
   rules: {
     'import-helpers/order-imports': [
       'warn',
