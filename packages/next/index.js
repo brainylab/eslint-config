@@ -1,9 +1,6 @@
 module.exports = {
   extends: ['next'],
-  plugins: [
-    'plugin:@typescript-eslint/recommended',
-    'eslint-plugin-import-helpers',
-  ],
+  plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
     'import-helpers/order-imports': [
       'warn',
