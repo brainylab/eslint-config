@@ -1,6 +1,9 @@
 module.exports = {
   extends: ['next'],
-  plugins: ['eslint-plugin-import-helpers'],
+  plugins: [
+    'plugin:@typescript-eslint/recommended',
+    'eslint-plugin-import-helpers',
+  ],
   rules: {
     'import-helpers/order-imports': [
       'warn',
@@ -10,12 +13,30 @@ module.exports = {
           ['/^react/', '/^next/'],
           'module',
           ['/^hooks/', '/^contexts/'],
-          ['/^shared/', '/^core/', '/^modules/', '/^config/', '/^components/'],
+          [
+            '/^shared/',
+            '/^core/',
+            '/^modules/',
+            '/^config/',
+            '/^components/',
+            '/^layouts/',
+          ],
           ['/^utils/', '/^service/'],
           ['/^interfaces/'],
           ['parent', 'sibling', 'index'],
         ],
-        alphabetize: { order: 'asc', ignoreCase: false },
+        alphabetize: { order: 'asc', ignoreCase: true },
+      },
+    ],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'interface',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^I[A-Z]',
+          match: true,
+        },
       },
     ],
   },
