@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config-base",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
@@ -13,16 +13,16 @@
     "url": "git+https://github.com/brainylab/eslint-config"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
     "@typescript-eslint/typescript-estree": "^5.27.0",
-    "eslint": "^8.16.0",
+    "eslint": "^8.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-import-resolver-typescript": "^3.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-import-helpers": "^1.2.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.6.2"
+    "prettier": "^2.7.1"
   }
 }

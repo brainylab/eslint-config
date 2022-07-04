@@ -6,7 +6,6 @@ module.exports = {
     jest: true,
   },
   extends: ['@brainylab/eslint-config-base'],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
