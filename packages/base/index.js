@@ -45,7 +45,7 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           'module',
-          '@brainylab',
+          '/@brainylab/',
           ['/^@modules/', '/^@core/', '/^@shared/'],
           ['/^@utils/', '/^@service/', '/^@config/'],
           ['/^@interfaces/', '/^@types/', '/^types/'],

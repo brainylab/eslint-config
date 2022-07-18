@@ -8,6 +8,7 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           ['/^react/', '/^next/'],
+          '/@brainylab/',
           'module',
           ['/^hooks/', '/^contexts/'],
           [

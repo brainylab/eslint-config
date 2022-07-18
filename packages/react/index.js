@@ -26,7 +26,7 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           '/^react/',
-          '@brainylab',
+          '/@brainylab/',
           ['module', '/^@unform/'],
           ['/^@hooks/'],
           [
