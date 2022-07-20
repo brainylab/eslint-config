@@ -23,6 +23,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'no-shadow': 'off',
     'no-console': 'off',
+    'no-use-before-define': 'off',
     'no-useless-constructor': 'off',
     'no-empty-function': 'off',
     'lines-between-class-members': 'off',
