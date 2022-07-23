@@ -26,7 +26,9 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           '/^react/',
-          '/@brainylab/',
+          ['/@brainylab/ui-admin', '/@brainylab/ui-bootstrap', '/@brainylab/'],
+          ['/@brainylab/ui-material-icons', '/@brainylab/ui-bootstrap-icons'],
+          ['/@brainylab/ui-generics', '/@brainylab/ui-hooks'],
           ['module', '/^@unform/'],
           ['/^@hooks/'],
           [
