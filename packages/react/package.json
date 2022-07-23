@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config-react",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
