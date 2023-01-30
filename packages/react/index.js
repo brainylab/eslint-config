@@ -1,8 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2020: true,
-    node: true,
+    es2021: true,
     jest: true,
   },
   extends: ['@brainylab/eslint-config-base'],
@@ -10,7 +9,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 11,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   plugins: ['react', 'react-hooks'],
@@ -22,7 +21,6 @@ module.exports = {
     'import-helpers/order-imports': [
       'warn',
       {
-        // example configuration
         newlinesBetween: 'always',
         groups: [
           '/^react/',
