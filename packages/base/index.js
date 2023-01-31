@@ -25,6 +25,7 @@ module.exports = {
     'no-console': 'off',
     'no-use-before-define': 'off',
     'no-useless-constructor': 'off',
+    'consistent-return': 'off',
     'no-empty-function': 'off',
     'lines-between-class-members': 'off',
     'import/no-duplicates': 'off',
