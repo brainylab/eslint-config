@@ -1,14 +1,13 @@
 module.exports = {
   env: {
-    es2020: true,
+    es2021: true,
     node: true,
     jest: true,
   },
   reportUnusedDisableDirectives: true,
   extends: [
-    'airbnb-base',
+    'standard',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
     'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -16,30 +15,30 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers', 'prettier'],
+  plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
-    camelcase: 'off',
-    'prettier/prettier': 'error',
-    'class-methods-use-this': 'off',
-    'no-shadow': 'off',
-    'no-console': 'off',
-    'no-use-before-define': 'off',
-    'no-useless-constructor': 'off',
-    'consistent-return': 'off',
-    'no-empty-function': 'off',
-    'lines-between-class-members': 'off',
-    'import/no-duplicates': 'off',
-    'import/no-unresolved': 'error',
-    'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': ['off', { devDependencies: ['*.js'] }],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        ts: 'never',
-      },
-    ],
+    'prettier/prettier': ['error'],
+    // camelcase: 'off',
+    // 'class-methods-use-this': 'off',
+    // 'no-shadow': 'off',
+    // 'no-console': 'off',
+    // 'no-use-before-define': 'off',
+    // 'no-useless-constructor': 'off',
+    // 'consistent-return': 'off',
+    // 'no-empty-function': 'off',
+    // 'lines-between-class-members': 'off',
+    // 'import/no-duplicates': 'off',
+    // 'import/no-unresolved': 'error',
+    // 'import/prefer-default-export': 'off',
+    // 'import/no-extraneous-dependencies': ['off', { devDependencies: ['*.js'] }],
+    // 'import/extensions': [
+    //   'error',
+    //   'ignorePackages',
+    //   {
+    //     js: 'never',
+    //     ts: 'never',
+    //   },
+    // ],
     'import-helpers/order-imports': [
       'warn',
       {
@@ -56,15 +55,18 @@ module.exports = {
       },
     ],
   },
-  overrides: [
-    {
-      files: ['*.js'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off',
-      },
-    },
-  ],
+  // overrides: [
+  //   {
+  //     files: ['*.js'],
+  //     rules: {
+  //       '@typescript-eslint/no-var-requires': 'off',
+  //     },
+  //   },
+  // ],
   settings: {
+    'import/parsers': {
+      [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
+    },
     'import/resolver': {
       typescript: {
         project: ['./*/**/tsconfig.json', './tsconfig.json'],
