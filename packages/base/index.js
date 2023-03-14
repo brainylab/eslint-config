@@ -21,15 +21,7 @@ module.exports = {
     camelcase: 'off',
     'no-useless-constructor': 'off',
     'no-param-reassign': 'off',
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-      {
-        functions: true,
-        classes: true,
-        variables: false,
-        allowNamedExports: false,
-      },
-    ],
+    '@typescript-eslint/no-use-before-define': 'off',
     'import-helpers/order-imports': [
       'warn',
       {
