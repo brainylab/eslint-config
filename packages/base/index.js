@@ -19,9 +19,10 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error'],
     camelcase: 'off',
-    'no-useless-constructor': 'off',
     'no-param-reassign': 'off',
     'no-use-before-define': 'off',
+    'import/no-duplicates': 'off',
+    'no-useless-constructor': 'off',
     'import-helpers/order-imports': [
       'warn',
       {
