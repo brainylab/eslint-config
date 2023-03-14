@@ -21,25 +21,15 @@ module.exports = {
     camelcase: 'off',
     'no-useless-constructor': 'off',
     'no-param-reassign': 'off',
-    // 'class-methods-use-this': 'off',
-    // 'no-shadow': 'off',
-    // 'no-console': 'off',
-    // 'no-use-before-define': 'off',
-    // 'consistent-return': 'off',
-    // 'no-empty-function': 'off',
-    // 'lines-between-class-members': 'off',
-    // 'import/no-duplicates': 'off',
-    // 'import/no-unresolved': 'error',
-    // 'import/prefer-default-export': 'off',
-    // 'import/no-extraneous-dependencies': ['off', { devDependencies: ['*.js'] }],
-    // 'import/extensions': [
-    //   'error',
-    //   'ignorePackages',
-    //   {
-    //     js: 'never',
-    //     ts: 'never',
-    //   },
-    // ],
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      {
+        functions: true,
+        classes: true,
+        variables: false,
+        allowNamedExports: false,
+      },
+    ],
     'import-helpers/order-imports': [
       'warn',
       {
@@ -56,14 +46,6 @@ module.exports = {
       },
     ],
   },
-  // overrides: [
-  //   {
-  //     files: ['*.js'],
-  //     rules: {
-  //       '@typescript-eslint/no-var-requires': 'off',
-  //     },
-  //   },
-  // ],
   settings: {
     'import/parsers': {
       [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
