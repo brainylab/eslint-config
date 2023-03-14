@@ -21,7 +21,7 @@ module.exports = {
     camelcase: 'off',
     'no-useless-constructor': 'off',
     'no-param-reassign': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
+    'no-use-before-define': 'off',
     'import-helpers/order-imports': [
       'warn',
       {
