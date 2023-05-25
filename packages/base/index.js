@@ -23,6 +23,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'import/no-duplicates': 'off',
     'no-useless-constructor': 'off',
+    'no-useless-catch': 'off',
     'import-helpers/order-imports': [
       'warn',
       {
