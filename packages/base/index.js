@@ -24,6 +24,7 @@ module.exports = {
     'import/no-duplicates': 'off',
     'no-useless-constructor': 'off',
     'no-useless-catch': 'off',
+    '@typescript-eslint/adjacent-overload-signatures': 'off',
     'import-helpers/order-imports': [
       'warn',
       {
