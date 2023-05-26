@@ -3,12 +3,14 @@ module.exports = {
     es2021: true,
     node: true,
     jest: true,
+    'vitest-globals/env': true,
   },
   reportUnusedDisableDirectives: true,
   extends: [
     'standard',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:vitest-globals/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
