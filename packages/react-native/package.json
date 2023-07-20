@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config-react-native",
-  "version": "0.0.4s",
+  "version": "0.0.5",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
