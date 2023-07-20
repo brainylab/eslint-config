@@ -9,10 +9,7 @@ module.exports = {
       {
         newlinesBetween: 'always',
         groups: [
-          '/^react/',
-          '/^react-native/',
-          '/^@react/',
-          '/^@react-native/',
+          ['/^react/', '/^react-native/'],
           ['/@brainylab/', 'module'],
           [
             '/^hooks/',
