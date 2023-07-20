@@ -5,12 +5,12 @@ this is the react configuration of ESLint is used in the Projects made by Brainy
 
 ### usage npm
 ```bash
-npm i --save-dev eslint @brainylab/eslint-config-next
+npm i --save-dev eslint @brainylab/eslint-config-react-native
 ```
 
 ### usage yarn
 ```bash
-yarn add -D eslint @brainylab/eslint-config-next
+yarn add -D eslint @brainylab/eslint-config-react-native
 ```
 ## Usage Config
 
@@ -18,7 +18,7 @@ create file .eslintrc.js in main project folder, add the lines below in the file
 
 ```js
 module.exports = {
-  extends: ['@brainylab/eslint-config-next'],
+  extends: ['@brainylab/eslint-config-react-native'],
 };
 ```
 ### Config VS Code to auto fix
