@@ -1,6 +1,7 @@
 {
   "name": "@brainylab/eslint-config",
   "private": true,
+  "type": "module",
   "author": {
     "name": "André Felipe Schulle",
     "email": "dev@brainylab.com.br"

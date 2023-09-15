@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     es2021: true,
     node: true,
@@ -9,8 +10,8 @@ module.exports = {
   extends: [
     'standard',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
     'plugin:vitest-globals/recommended',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,7 +20,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
-    'prettier/prettier': ['error'],
     camelcase: 'off',
     'no-param-reassign': 'off',
     'no-use-before-define': 'off',
