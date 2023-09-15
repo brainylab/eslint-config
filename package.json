@@ -1,6 +1,5 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "0.4.1",
   "private": true,
   "author": {
     "name": "André Felipe Schulle",
