@@ -38,6 +38,7 @@ module.exports = {
           ['/^@utils/', '/^@service/', '/^@config/'],
           ['/^@interfaces/', '/^@types/', '/^types/'],
           ['parent', 'sibling', 'index'],
+          ['type']
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
       },

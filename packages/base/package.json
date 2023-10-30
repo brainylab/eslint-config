@@ -1,12 +1,13 @@
 {
   "name": "@brainylab/eslint-config-base",
-  "version": "0.6.11",
+  "version": "0.7.0",
   "main": "index.js",
   "license": "MIT",
   "description": "ESLint configuration used by BrainyLab.",
   "keywords": [
     "eslint",
     "config",
+    "preset",
     "brainylab"
   ],
   "repository": {
@@ -14,16 +15,16 @@
     "url": "git+https://github.com/brainylab/eslint-config"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.59.7",
-    "@typescript-eslint/parser": "5.59.7",
-    "@typescript-eslint/typescript-estree": "5.59.7",
-    "eslint": "8.49.0",
+    "@typescript-eslint/eslint-plugin": "6.9.1",
+    "@typescript-eslint/parser": "6.9.1",
+    "@typescript-eslint/typescript-estree": "6.9.1",
+    "eslint": "8.52.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-config-standard": "17.1.0",
-    "eslint-import-resolver-typescript": "3.6.0",
-    "eslint-plugin-import": "2.28.1",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.0",
     "eslint-plugin-import-helpers": "1.3.1",
-    "eslint-plugin-n": "16.1.0",
+    "eslint-plugin-n": "16.2.0",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-vitest-globals": "1.4.0",
     "prettier": "3.0.3"
@@ -33,7 +34,7 @@
   },
   "peerDependencies": {
     "eslint": ">=8",
-    "prettier": ">=2",
+    "prettier": ">=3",
     "typescript": ">=4"
   },
   "peerDependenciesMeta": {
