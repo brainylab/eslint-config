@@ -19,9 +19,9 @@
     "commit": "yarn commit:add && yarn commit:detail && yarn commit:push"
   },
   "devDependencies": {
-    "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "typescript": "^4.9.4"
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
+    "typescript": "5.2.2"
   },
   "engines": {
     "node": ">=18"
