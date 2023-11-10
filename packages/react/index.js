@@ -21,10 +21,8 @@ module.exports = {
       {
         newlinesBetween: 'always',
         groups: [
-          '/^react/',
-          ['/@brainylab/ui-admin/', '/@brainylab/ui-bootstrap/'],
-          ['/@brainylab/ui-material-icons/', '/@brainylab/ui-bootstrap-icons/'],
-          ['/@brainylab/ui-generics/', '/@brainylab/ui-hooks/', '/@brainylab/'],
+          ['/^react/'],
+          ['/@brainylab/'],
           ['module'],
           ['/^@hooks/'],
           [
@@ -36,8 +34,9 @@ module.exports = {
           ],
           ['/^@utils/', '/^@service/'],
           ['/^@interfaces/'],
-          ['parent', 'sibling', 'index'],
-          ['type']
+          ['sibling', 'parent', "type"],
+          ['absolute'],
+          ['index'],
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
       },
