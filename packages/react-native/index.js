@@ -9,8 +9,8 @@ module.exports = {
       {
         newlinesBetween: 'always',
         groups: [
-          ['/^react/', '/^react-native/'],
-          ['/@brainylab/', 'module'],
+          ['/^react/', '/^react-native/', 'type'],
+          ['/@brainylab/', 'module', 'type'],
           [
             '/^hooks/',
             '/^@hooks/',
@@ -18,6 +18,7 @@ module.exports = {
             '/^@contexts/',
             '/^reducers/',
             '/^@reducers/',
+            'type'
           ],
           [
             '/^database/',
@@ -30,11 +31,11 @@ module.exports = {
             '/^@screens/',
             '/^routes/',
             '/^@routes/',
+            'type'
           ],
-          ['/^utils/', '/^@utils/', '/^services/', '/^@services/'],
-          ['/^interfaces/', '/^@interfaces/'],
-          ['parent', 'sibling', 'index'],
-          ['type']
+          ['/^utils/', '/^@utils/', '/^services/', '/^@services/', 'type'],
+          ['/^interfaces/', '/^@interfaces/', 'type'],
+          ['parent', 'sibling', 'index', 'type'],
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
       },

@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config-next",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "main": "index.js",
   "license": "MIT",
   "keywords": [

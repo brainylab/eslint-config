@@ -7,10 +7,10 @@ module.exports = {
       {
         newlinesBetween: 'always',
         groups: [
-          ['/^react/', '/^next/'],
-          '/@brainylab/',
-          'module',
-          ['/^hooks/', '/^contexts/'],
+          ['/^react/', '/^next/', 'type'],
+          ['/@brainylab/', 'type'],
+          ['module', 'type'],
+          ['/^hooks/', '/^contexts/', 'type'],
           [
             '/^shared/',
             '/^core/',
@@ -18,11 +18,11 @@ module.exports = {
             '/^config/',
             '/^components/',
             '/^layouts/',
+            'type'
           ],
-          ['/^utils/', '/^service/'],
-          ['/^interfaces/'],
-          ['parent', 'sibling', 'index'],
-          ['type']
+          ['/^utils/', '/^service/', 'type'],
+          ['/^interfaces/', 'type'],
+          ['parent', 'sibling', 'index', 'type'],
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
       },

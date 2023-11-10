@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config-base",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "main": "index.js",
   "license": "MIT",
   "description": "ESLint configuration used by BrainyLab.",

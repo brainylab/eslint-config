@@ -21,23 +21,21 @@ module.exports = {
       {
         newlinesBetween: 'always',
         groups: [
-          '/^react/',
-          ['/@brainylab/ui-admin/', '/@brainylab/ui-bootstrap/'],
-          ['/@brainylab/ui-material-icons/', '/@brainylab/ui-bootstrap-icons/'],
-          ['/@brainylab/ui-generics/', '/@brainylab/ui-hooks/', '/@brainylab/'],
-          ['module'],
-          ['/^@hooks/'],
+          ['/^react/', 'type'],
+          ['/@brainylab/', 'type'],
+          ['module', 'type'],
+          ['/^@hooks/', 'type'],
           [
             '/^@shared/',
             '/^@core/',
             '/^@modules/',
             '/^@config/',
             '/^@components/',
+            'type'
           ],
-          ['/^@utils/', '/^@service/'],
-          ['/^@interfaces/'],
-          ['parent', 'sibling', 'index'],
-          ['type']
+          ['/^@utils/', '/^@service/', 'type'],
+          ['/^@interfaces/', 'type'],
+          ['parent', 'sibling', 'index', 'type'],
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
       },
