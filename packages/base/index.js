@@ -27,6 +27,7 @@ module.exports = {
     'no-useless-constructor': 'off',
     'no-useless-catch': 'off',
     '@typescript-eslint/adjacent-overload-signatures': 'off',
+    "@typescript-eslint/no-explicit-any": "warn",
     'import-helpers/order-imports': [
       'warn',
       {
