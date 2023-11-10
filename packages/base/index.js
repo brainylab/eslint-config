@@ -27,19 +27,18 @@ module.exports = {
     'no-useless-constructor': 'off',
     'no-useless-catch': 'off',
     '@typescript-eslint/adjacent-overload-signatures': 'off',
-    '@typescript-eslint/adjacent-overload-signatures': 'off',
-    "@typescript-eslint/no-explicit-any": "warn",
     'import-helpers/order-imports': [
       'warn',
       {
         newlinesBetween: 'always',
         groups: [
-          ['module', 'type'],
-          ['/@brainylab/', 'type'],
-          ['/^@modules/', '/^@core/', '/^@shared/', 'type'],
-          ['/^@utils/', '/^@service/', '/^@config/', 'type'],
-          ['/^@interfaces/', '/^@types/', '/^types/', 'type'],
-          ['parent', 'sibling', 'index', 'type'],
+          'module',
+          '/@brainylab/',
+          ['/^@modules/', '/^@core/', '/^@shared/'],
+          ['/^@utils/', '/^@service/', '/^@config/'],
+          ['/^@interfaces/', '/^@types/', '/^types/'],
+          ['parent', 'sibling', 'index'],
+          ['type']
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
       },

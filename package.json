@@ -16,7 +16,7 @@
     "commit:add": "git add .",
     "commit:detail": "cz",
     "commit:push": "git push",
-    "commit": "pnpm commit:add && pnpm commit:detail && pnpm commit:push"
+    "commit": "yarn commit:add && yarn commit:detail && yarn commit:push"
   },
   "devDependencies": {
     "commitizen": "4.3.0",
