@@ -26,8 +26,6 @@ module.exports = {
     'import/no-duplicates': 'off',
     'no-useless-constructor': 'off',
     'no-useless-catch': 'off',
-    '@typescript-eslint/adjacent-overload-signatures': 'off',
-    "@typescript-eslint/no-explicit-any": "warn",
     'import-helpers/order-imports': [
       'warn',
       {
@@ -38,8 +36,7 @@ module.exports = {
           ['/^@modules/', '/^@core/', '/^@shared/'],
           ['/^@utils/', '/^@service/', '/^@config/'],
           ['/^@interfaces/', '/^@types/', '/^types/'],
-          ['parent', 'sibling', 'index'],
-          ['type']
+          ['parent', 'sibling', 'index', 'type'],
         ],
         alphabetize: { order: 'asc', ignoreCase: true },
       },
