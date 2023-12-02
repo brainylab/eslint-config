@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "license": "MIT",
   "author": {
     "name": "André Felipe Schulle",
@@ -15,9 +15,6 @@
   "description": "ESLint config for BrainyLab projects",
   "main": "index.js",
   "scripts": {
-    "pub": "lerna publish",
-    "bump": "lerna version",
-    "test": "lerna run test",
     "commit:add": "git add .",
     "commit:detail": "cz",
     "commit:push": "git push",

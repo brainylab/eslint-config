@@ -5,21 +5,40 @@ this is the base configuration of ESLint is used in the Projects made by BrainyL
 
 ### usage npm
 ```bash
-npm i --save-dev eslint @brainylab/eslint-config-base
+# npm
+npm i --save-dev eslint prettier @brainylab/eslint-config
+
+#yarn
+yarn add -D eslint prettier @brainylab/eslint-config
+
+#pnpm
+pnpm add -D eslint prettier @brainylab/eslint-config
 ```
 
-### usage yarn
-```bash
-yarn add -D eslint @brainylab/eslint-config-base
-```
 ## Usage Config
 
-create file .eslintrc.js in main project folder, add the lines below in the file.
+create file .eslintrc.json in main project folder, add the lines below in the file.
 
-```js
-module.exports = {
-  extends: ['@brainylab/eslint-config-base'],
-};
+```json
+// node version
+{
+  "extends": "@brainylab/eslint-config/node"
+}
+
+// react
+{
+  "extends": "@brainylab/eslint-config/react"
+}
+
+// react-native
+{
+  "extends": "@brainylab/eslint-config/react-native"
+}
+
+// next
+{
+  "extends": "@brainylab/eslint-config/next"
+}
 ```
 ### Config VS Code to auto fix
 
@@ -32,18 +51,6 @@ create ou alter `.vscode/settings.json`.
     "source.fixAll.eslint": true
   }
 }
-```
-
-### Prettier Config
-
-create prettier config `prettier.config.js` in main project folder
-
-```javascript
-module.exports = {
-  singleQuote: true,
-  trailingComma: 'all',
-  arrowParens: 'avoid',
-};
 ```
 
 ## License
