@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "author": {
     "name": "André Felipe Schulle",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@react-native/eslint-config": "0.74.0",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "^5.25.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.5.0",
