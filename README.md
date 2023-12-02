@@ -19,23 +19,29 @@ pnpm add -D eslint prettier @brainylab/eslint-config
 
 create file .eslintrc.json in main project folder, add the lines below in the file.
 
+#### config node project
 ```json
-// node version
 {
   "extends": "@brainylab/eslint-config/node"
 }
+```
 
-// react
+#### config react project
+```json
 {
   "extends": "@brainylab/eslint-config/react"
 }
+```
 
-// react-native
+#### config react-native project
+```json
 {
   "extends": "@brainylab/eslint-config/react-native"
 }
+```
 
-// next
+#### config next project
+```json
 {
   "extends": "@brainylab/eslint-config/next"
 }
