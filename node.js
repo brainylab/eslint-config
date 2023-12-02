@@ -1,17 +1,12 @@
 module.exports = {
-  root: true,
   env: {
     es2021: true,
     node: true,
-    jest: true,
-    'vitest-globals/env': true,
   },
-  reportUnusedDisableDirectives: true,
   extends: [
     'standard',
     'plugin:@typescript-eslint/recommended',
-    'plugin:vitest-globals/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,12 +15,17 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
-    camelcase: 'off',
-    'no-param-reassign': 'off',
-    'no-use-before-define': 'off',
-    'import/no-duplicates': 'off',
-    'no-useless-constructor': 'off',
-    'no-useless-catch': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 80,
+        tabWidth: 2,
+        singleQuote: true,
+        trailingComma: 'all',
+        arrowParens: 'always',
+        semi: false,
+      },
+    ],
     'import-helpers/order-imports': [
       'warn',
       {
@@ -46,10 +46,5 @@ module.exports = {
     'import/parsers': {
       [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
     },
-    'import/resolver': {
-      typescript: {
-        project: ['./*/**/tsconfig.json', './tsconfig.json'],
-      },
-    },
   },
-};
+}

@@ -1,11 +1,9 @@
-name: CI - Publish Eslint Config NextJs
+name: CI - Publish Eslint Config
 
 on:
   push:
     branches:
       - master
-    paths:
-      - 'packages/next/**'
 
 jobs:
   publish-grp:
@@ -26,7 +24,7 @@ jobs:
         run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.PUBLISH_TOKEN_GRP }}
 
       - name: Publish Packages on GRP
-        run: cd packages/next && npm publish --access public
+        run: npm publish --access public
 
   publish-npm:
     runs-on: ubuntu-latest
@@ -43,5 +41,5 @@ jobs:
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Publish Packages on NPM
-        run: cd packages/next && npm publish --access public
+        run: npm publish --access public
 
