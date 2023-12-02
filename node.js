@@ -23,7 +23,7 @@ module.exports = {
         singleQuote: true,
         trailingComma: 'all',
         arrowParens: 'always',
-        semi: false,
+        semi: true,
       },
     ],
     'import-helpers/order-imports': [

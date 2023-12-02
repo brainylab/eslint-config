@@ -2,6 +2,17 @@ module.exports = {
   extends: ['@react-native'],
   plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 80,
+        tabWidth: 2,
+        singleQuote: true,
+        trailingComma: 'all',
+        arrowParens: 'always',
+        semi: true,
+      },
+    ],
     'react/no-unstable-nested-components': 'off',
     'react-native/no-inline-styles': 'off',
     'import-helpers/order-imports': [

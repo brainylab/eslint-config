@@ -11,8 +11,7 @@ module.exports = {
         singleQuote: true,
         trailingComma: 'all',
         arrowParens: 'always',
-        semi: false,
-        endOfLine: 'auto',
+        semi: true,
       },
     ],
     'import-helpers/order-imports': [
