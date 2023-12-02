@@ -1,6 +1,14 @@
 module.exports = {
-  extends: ['@react-native'],
-  plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
+  env: {
+    es6: true,
+  },
+  extends: ['@brainylab/eslint-config/react'],
+  plugins: [
+    '@typescript-eslint',
+    'eslint-plugin-import-helpers',
+    'react-native',
+    '@react-native',
+  ],
   rules: {
     'prettier/prettier': [
       'error',
@@ -60,4 +68,4 @@ module.exports = {
     },
   },
   ignorePatterns: ['node_modules'],
-}
+};

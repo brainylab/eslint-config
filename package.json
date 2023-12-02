@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "author": {
     "name": "André Felipe Schulle",
@@ -21,10 +21,10 @@
     "commit": "pnpm commit:add && pnpm commit:detail && pnpm commit:push"
   },
   "dependencies": {
-    "@react-native/eslint-config": "0.74.0",
-    "@typescript-eslint/eslint-plugin": "6.13.1",
-    "@typescript-eslint/parser": "^5.25.0",
-    "eslint": "^8.0.0",
+    "@react-native/eslint-plugin": "0.74.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.55.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -35,7 +35,8 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
-    "prettier": "^3.0.0"
+    "eslint-plugin-react-native": "4.1.0",
+    "prettier": "^3.1.0"
   },
   "devDependencies": {
     "commitizen": "^4.3.0",
