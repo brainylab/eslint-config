@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ['next'],
+  extends: [
+    'next',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
