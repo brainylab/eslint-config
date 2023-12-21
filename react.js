@@ -27,6 +27,7 @@ module.exports = {
   ],
   rules: {
     'react/self-closing-comp': 'error',
+    '@typescript-eslint/no-explicit-any': 'warn',
     'prettier/prettier': [
       'error',
       {

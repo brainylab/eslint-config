@@ -18,6 +18,7 @@ module.exports = {
         semi: true,
       },
     ],
+    '@typescript-eslint/no-explicit-any': 'warn',
     'import-helpers/order-imports': [
       'warn',
       {
