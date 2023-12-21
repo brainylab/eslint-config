@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const defaultRules = require('./default-rules');
+
 module.exports = {
   env: {
     es6: true,
@@ -10,20 +13,9 @@ module.exports = {
     '@react-native',
   ],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        printWidth: 80,
-        tabWidth: 2,
-        singleQuote: true,
-        trailingComma: 'all',
-        arrowParens: 'always',
-        semi: true,
-      },
-    ],
+    ...defaultRules,
     'react/no-unstable-nested-components': 'off',
     'react-native/no-inline-styles': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
     'import-helpers/order-imports': [
       'warn',
       {

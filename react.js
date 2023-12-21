@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const defaultRules = require('./default-rules');
+
 module.exports = {
   env: {
     browser: true,
@@ -26,19 +29,8 @@ module.exports = {
     'eslint-plugin-import-helpers',
   ],
   rules: {
+    ...defaultRules,
     'react/self-closing-comp': 'error',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'prettier/prettier': [
-      'error',
-      {
-        printWidth: 80,
-        tabWidth: 2,
-        singleQuote: true,
-        trailingComma: 'all',
-        arrowParens: 'always',
-        semi: true,
-      },
-    ],
     'react/jsx-filename-extension': [2, { extensions: ['.tsx', '.jsx'] }],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',

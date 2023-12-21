@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const defaultRules = require('./default-rules');
+
 module.exports = {
   extends: [
     'next',
@@ -7,18 +10,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        printWidth: 80,
-        tabWidth: 2,
-        singleQuote: true,
-        trailingComma: 'all',
-        arrowParens: 'always',
-        semi: true,
-      },
-    ],
-    '@typescript-eslint/no-explicit-any': 'warn',
+    ...defaultRules,
     'import-helpers/order-imports': [
       'warn',
       {

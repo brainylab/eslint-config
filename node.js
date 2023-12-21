@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const defaultRules = require('./default-rules');
+
 module.exports = {
   env: {
     es2021: true,
@@ -15,19 +18,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
+    ...defaultRules,
     'no-useless-constructor': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'prettier/prettier': [
-      'error',
-      {
-        printWidth: 80,
-        tabWidth: 2,
-        singleQuote: true,
-        trailingComma: 'all',
-        arrowParens: 'always',
-        semi: true,
-      },
-    ],
     'import-helpers/order-imports': [
       'warn',
       {

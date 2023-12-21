@@ -1,3 +1,3 @@
-const baseConfig = require('./node')
+const baseConfig = require('./node');
 
-module.exports = baseConfig
+module.exports = baseConfig;
