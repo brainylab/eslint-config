@@ -30,6 +30,7 @@ module.exports = {
   ],
   rules: {
     ...defaultRules,
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     'react/self-closing-comp': 'error',
     'react/jsx-filename-extension': [2, { extensions: ['.tsx', '.jsx'] }],
     'react/react-in-jsx-scope': 'off',

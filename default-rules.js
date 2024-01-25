@@ -2,7 +2,11 @@ module.exports = {
   'no-unused-vars': 'off',
   '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
   '@typescript-eslint/no-unused-vars': 'error',
-  '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+  '@typescript-eslint/consistent-type-exports': 'error',
+  '@typescript-eslint/consistent-type-imports': [
+    'error',
+    { fixStyle: 'separate-type-imports' },
+  ],
   'prettier/prettier': [
     'error',
     {

@@ -14,6 +14,7 @@ module.exports = {
   ],
   rules: {
     ...defaultRules,
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     'react/no-unstable-nested-components': 'off',
     'react-native/no-inline-styles': 'off',
     'import-helpers/order-imports': [
