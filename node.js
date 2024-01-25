@@ -2,21 +2,21 @@
 const defaultRules = require('./default-rules');
 
 module.exports = {
+  root: true,
   env: {
     es2021: true,
     node: true,
   },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   extends: [
     'standard',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
     ...defaultRules,
     'no-useless-constructor': 'off',
