@@ -12,6 +12,9 @@ module.exports = {
     'react-native',
     '@react-native',
   ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   rules: {
     ...defaultRules,
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
