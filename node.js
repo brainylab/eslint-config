@@ -21,7 +21,6 @@ module.exports = {
   rules: {
     ...defaultRules,
     'no-useless-constructor': 'off',
-    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     'import-helpers/order-imports': [
       'warn',
       {
