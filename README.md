@@ -2,8 +2,6 @@
 this is the base configuration of ESLint is used in the Projects made by BrainyLab Development.
 
 ## Install Config
-
-### usage npm
 ```bash
 # npm
 npm i --save-dev eslint prettier @brainylab/eslint-config
@@ -15,7 +13,30 @@ yarn add -D eslint prettier @brainylab/eslint-config
 pnpm add -D eslint prettier @brainylab/eslint-config
 ```
 
-## Usage Config
+## Usage Flat Config - ESlint 9+
+
+create file eslint.config.js or EMS eslint.config.mjs in main project folder, add the lines below in the file.
+
+```javascript
+import { configs } from '@brainylab/eslint-config/configs'
+export default [
+  [
+    /* your custom config */
+  ],
+  // using base config
+  ...configs.base,
+  // using typescript config
+  ...configs.typescript,
+  // using typescript config
+  ...configs.node
+]
+```
+
+#### Config Prettier
+para configurar o prettier corretamente,
+[BrainyLab Prettier Config](https://www.npmjs.com/package/@brainylab/prettier-config)
+
+## Usage Config Legacy
 
 create file .eslintrc.json in main project folder, add the lines below in the file.
 
@@ -53,7 +74,7 @@ create ou alter `.vscode/settings.json`.
 ```json
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit",
   }
 }
 ```
