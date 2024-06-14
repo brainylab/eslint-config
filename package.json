@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "license": "MIT",
   "type": "module",
   "author": {
@@ -11,10 +11,11 @@
     "type": "git",
     "url": "https://github.com/brainylab/eslint-config.git"
   },
+  "main": "./dist/index.js",
   "exports": {
-    "import": "./dist/configs/index.js",
-    "require": "./dist/configs/index.cjs",
-    "types": "./dist/configs/index.d.ts"
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs",
+    "types": "./dist/index.d.ts"
   },
   "files": [
     "dist",
@@ -29,7 +30,6 @@
     "brainylab"
   ],
   "description": "ESLint config for BrainyLab projects",
-  "main": "index.js",
   "scripts": {
     "build": "npx tsup",
     "commit:add": "git add .",
@@ -60,7 +60,7 @@
     "node": ">=18"
   },
   "peerDependencies": {
-    "eslint": ">=8",
+    "eslint": ">=8.56.0",
     "typescript": ">=4"
   },
   "peerDependenciesMeta": {
