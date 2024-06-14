@@ -32,7 +32,7 @@ export const base = [
     },
     settings: { 'import-x/resolver': { typescript: {} } },
     rules: {
-      ...pluginJs.configs['recommended'].rules,
+      ...pluginJs.configs.recommended.rules,
       'no-unused-vars': 'off',
       'import/order': [
         'error',

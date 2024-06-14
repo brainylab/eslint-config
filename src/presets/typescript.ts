@@ -1,13 +1,13 @@
-import eslintTypescript, { parser } from 'typescript-eslint';
+import eslintTypescript from 'typescript-eslint';
 import type { FlatESLintConfig } from 'eslint-define-config';
 
-export const typescript = eslintTypescript.config({
+const typescriptCore = eslintTypescript.config({
   extends: [...eslintTypescript.configs.recommended],
   languageOptions: {
     parserOptions: {
-      parser,
+      parser: eslintTypescript.parser,
+      project: './tsconfig.json',
       ecmaVersion: 'latest',
-      project: ['./tsconfig.json'],
       sourceType: 'module',
     },
   },
@@ -29,4 +29,40 @@ export const typescript = eslintTypescript.config({
       { fixStyle: 'separate-type-imports' },
     ],
   },
-}) as FlatESLintConfig[];
+});
+
+export const typescript = [
+  ...typescriptCore,
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      'eslint-comments/no-unlimited-disable': 'off',
+      'import/no-duplicates': 'off',
+      'unused-imports/no-unused-vars': 'off',
+    },
+  },
+  {
+    files: ['**/*.{test,spec}.ts?(x)'],
+    rules: {
+      'no-unused-expressions': 'off',
+    },
+  },
+  {
+    files: ['**/*.?([cm])js', '**/*.cjs'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+      '@typescript-eslint/no-var-requires': 'off',
+    },
+  },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      'no-restricted-syntax': [
+        'error',
+        'ForInStatement',
+        'LabeledStatement',
+        'WithStatement',
+      ],
+    },
+  },
+] as FlatESLintConfig[];
