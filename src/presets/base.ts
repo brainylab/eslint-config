@@ -1,9 +1,8 @@
 import eslintConfigPrettier from 'eslint-config-prettier';
 import pluginJs from '@eslint/js';
 import eslintPluginImport from 'eslint-plugin-import-x';
-import type { FlatESLintConfig } from 'eslint-define-config';
-
 import globals from 'globals';
+import type { FlatESLintConfig } from 'eslint-define-config';
 
 export const base = [
   {

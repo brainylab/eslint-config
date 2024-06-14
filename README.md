@@ -55,42 +55,6 @@ export default [
 This library focuses on linter and prettier was separated for better performance, to use prettier together with ESlint, following this documentation
 [BrainyLab Prettier Config](https://www.npmjs.com/package/@brainylab/prettier-config)
 
-## Usage Config Legacy
-
-create file .eslintrc.json in main project folder, add the lines below in the file.
-
-#### config node project
-
-```json
-{
-  "extends": "@brainylab/eslint-config/node"
-}
-```
-
-#### config react project
-
-```json
-{
-  "extends": "@brainylab/eslint-config/react"
-}
-```
-
-#### config react-native project
-
-```json
-{
-  "extends": "@brainylab/eslint-config/react-native"
-}
-```
-
-#### config next project
-
-```json
-{
-  "extends": "@brainylab/eslint-config/next"
-}
-```
-
 ### Config VS Code to auto fix
 
 create ou alter `.vscode/settings.json`.
