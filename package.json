@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "type": "module",
   "author": {
@@ -30,7 +30,7 @@
   "description": "ESLint config for BrainyLab projects",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm tsup && cp ./legacy/* dist",
+    "build": "npx tsup && cp ./legacy/* dist",
     "commit:add": "git add .",
     "commit:detail": "cz",
     "commit:push": "git push",
