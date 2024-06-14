@@ -49,7 +49,7 @@ jobs:
           node-version: 20
 
       - name: Build Packages
-        run: npm install && npm run build
+        run: npm install --force && npm run build
 
       - name: Npm registry authentication
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
