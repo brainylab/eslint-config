@@ -22,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: Build Packages
-        run: npm install && npm run build
+        run: npm install --force && npm run build
 
       - name: Set package registry GRP
         run: npm config set registry https://npm.pkg.github.com
