@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "license": "MIT",
   "type": "module",
   "author": {
@@ -14,10 +14,10 @@
     "type": "git",
     "url": "https://github.com/brainylab/eslint-config.git"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": "./dist/index.js",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": "./index.js",
   "keywords": [
     "eslint",
     "config",
