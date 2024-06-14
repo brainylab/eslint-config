@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "license": "MIT",
   "type": "module",
   "author": {
@@ -13,7 +13,8 @@
   },
   "exports": {
     "import": "./dist/configs/index.js",
-    "require": "./dist/configs/index.cjs"
+    "require": "./dist/configs/index.cjs",
+    "types": "./dist/configs/index.d.ts"
   },
   "files": [
     "dist",

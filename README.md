@@ -57,13 +57,16 @@ This library focuses on linter and prettier was separated for better performance
 
 ### Config VS Code to auto fix
 
+Install [ESlint Plugin on VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint):
+
 create ou alter `.vscode/settings.json`.
 
 ```json
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
-  }
+  },
+  "eslint.experimental.useFlatConfig": true
 }
 ```
 
