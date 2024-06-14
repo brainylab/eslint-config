@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "license": "MIT",
   "type": "module",
   "author": {
@@ -23,12 +23,6 @@
     "config",
     "preset",
     "brainylab"
-  ],
-  "files": [
-    "dist",
-    "package.json",
-    "README.md",
-    "LICENSE"
   ],
   "description": "ESLint config for BrainyLab projects",
   "scripts": {
