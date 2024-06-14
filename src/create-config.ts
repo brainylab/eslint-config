@@ -1,10 +1,10 @@
-import type { FlatESLintConfig } from 'eslint-define-config';
 import { base } from './presets/base';
 import { typescript } from './presets/typescript';
 import { node } from './presets/node';
+import type { FlatESLintConfig } from 'eslint-define-config';
 
 type ConfigParams = {
-  config: FlatESLintConfig | FlatESLintConfig[];
+  config?: FlatESLintConfig | FlatESLintConfig[];
   presets?: {
     typescript?: boolean;
     node?: boolean;
@@ -22,12 +22,11 @@ export function createConfig(params: ConfigParams): FlatESLintConfig[] {
     configs.push(...node);
   }
 
-  if (Object.keys(params.config).length > 0) {
+  if (params.config) {
     configs.push(
       ...(Array.isArray(params.config) ? params.config : [params.config]),
     );
   }
 
   return configs;
-  899;
 }
