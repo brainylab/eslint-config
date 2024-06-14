@@ -1,14 +1,30 @@
-import eslintTypescript from 'typescript-eslint';
+import { tsEslint } from '../plugins';
 import type { FlatESLintConfig } from 'eslint-define-config';
 
-const typescriptCore = eslintTypescript.config({
-  extends: [...eslintTypescript.configs.recommended],
+const typeScriptExtensions = ['.ts', '.tsx'] as const;
+
+const allExtensions = [...typeScriptExtensions, '.js', '.jsx'] as const;
+
+const typescriptCore = tsEslint.config({
+  extends: [...tsEslint.configs.recommended],
   languageOptions: {
     parserOptions: {
-      parser: eslintTypescript.parser,
+      parser: tsEslint.parser,
       project: './tsconfig.json',
       ecmaVersion: 'latest',
       sourceType: 'module',
+    },
+  },
+  settings: {
+    'import-x/extensions': allExtensions,
+    'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
+    'import-x/parsers': {
+      '@typescript-eslint/parser': [...typeScriptExtensions, '.cts', '.mts'],
+    },
+    'import-x/resolver': {
+      node: {
+        extensions: allExtensions,
+      },
     },
   },
   files: ['**/*.{ts,tsx}'],

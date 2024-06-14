@@ -1,4 +1,3 @@
-import { base } from './dist/presets/base.js';
-import { typescript } from './dist/presets/typescript.js';
+import { presets } from './dist/index.js';
 
-export default [...base, ...typescript];
+export default [...presets.base, ...presets.typescript];

@@ -1,10 +1,8 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src'],
-  outDir: 'dist',
-  format: ['cjs', 'esm'],
-  target: 'es2018',
+  entry: ['./src/index.ts'],
+  format: ['esm'],
+  target: 'node18.18',
   dts: true,
-  bundle: false,
 });

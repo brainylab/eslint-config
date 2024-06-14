@@ -1,7 +1,9 @@
-import eslintConfigPrettier from 'eslint-config-prettier';
 import pluginJs from '@eslint/js';
-import eslintPluginImport from 'eslint-plugin-import-x';
+
 import globals from 'globals';
+
+import { pluginImport, configPrettier } from '../plugins';
+
 import type { FlatESLintConfig } from 'eslint-define-config';
 
 export const base = [
@@ -16,7 +18,7 @@ export const base = [
       '**/*.d.ts',
     ],
     plugins: {
-      import: eslintPluginImport,
+      import: pluginImport,
     },
     languageOptions: {
       parserOptions: {
@@ -30,9 +32,9 @@ export const base = [
         ...globals.es2021,
       },
     },
-    settings: { 'import-x/resolver': { typescript: {} } },
     rules: {
       ...pluginJs.configs.recommended.rules,
+      'import-x/named': 'off',
       'no-unused-vars': 'off',
       'import/order': [
         'error',
@@ -53,5 +55,5 @@ export const base = [
       ],
     },
   },
-  eslintConfigPrettier,
+  configPrettier,
 ] as FlatESLintConfig[];

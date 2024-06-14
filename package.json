@@ -1,37 +1,41 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "license": "MIT",
   "type": "module",
   "author": {
     "name": "André Felipe Schulle",
     "email": "dev@brainylab.com.br"
   },
+  "bugs": {
+    "url": "https://github.com/brainylab/eslint-config/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/brainylab/eslint-config.git"
   },
   "main": "./dist/index.js",
-  "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs",
-    "types": "./dist/index.d.ts"
-  },
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md",
-    "package.json"
-  ],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
   "keywords": [
     "eslint",
     "config",
     "preset",
     "brainylab"
   ],
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "description": "ESLint config for BrainyLab projects",
   "scripts": {
-    "build": "npx tsup",
+    "build": "npm run build:remove && npm run build:configs && npm run build:packages",
+    "build:remove": "rm -rf ./build",
+    "build:configs": "npx tsup",
+    "build:packages": "npx tsx ./scripts/build-packages.ts",
     "commit:add": "git add .",
     "commit:detail": "cz",
     "commit:push": "git push",
@@ -43,6 +47,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-define-config": "2.1.0",
     "eslint-plugin-import-x": "0.5.1",
+    "eslint-plugin-n": "17.9.0",
     "globals": "15.4.0",
     "typescript-eslint": "7.13.0"
   },
@@ -53,7 +58,9 @@
     "@types/node": "20.14.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "fast-glob": "3.3.2",
     "tsup": "8.1.0",
+    "tsx": "4.15.4",
     "typescript": "^5.4.5"
   },
   "engines": {
