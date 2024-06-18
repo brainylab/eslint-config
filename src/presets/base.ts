@@ -35,30 +35,24 @@ export const base = [
 			...pluginJs.configs.recommended.rules,
 			'no-unused-vars': 'off',
 			'import-x/named': 'off',
-			// 'import/order': [
-			// 	'error',
-			// 	{
-			// 		'newlines-between': 'always',
-			// 		groups: [
-			// 			'builtin',
-			// 			'external',
-			// 			'internal',
-			// 			'parent',
-			// 			'sibling',
-			// 			'index',
-			// 			'object',
-			// 			['type'],
-			// 		],
-			// 		// pathGroups: [
-			// 		//   {
-			// 		//     pattern: '~/**',
-			// 		//     group: 'external',
-			// 		//   },
-			// 		// ],
-			// 		// pathGroups: [{ group: 'internal', pattern: '{{@,~}/,#}**' }],
-			// 		pathGroupsExcludedImportTypes: ['type'],
-			// 	},
-			// ],
+			'import/order': [
+				'error',
+				{
+					'newlines-between': 'always',
+					groups: [
+						'builtin',
+						'external',
+						'internal',
+						'parent',
+						'sibling',
+						'index',
+						'object',
+						'type',
+					],
+					pathGroups: [{ group: 'internal', pattern: '{{@,~}/,#}**' }],
+					pathGroupsExcludedImportTypes: ['type'],
+				},
+			],
 		},
 	},
 	configPrettier,
