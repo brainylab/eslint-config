@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/eslint-config",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "license": "MIT",
   "type": "module",
   "author": {
@@ -26,10 +26,11 @@
   ],
   "description": "ESLint config for BrainyLab projects",
   "scripts": {
-    "build": "npm run build:remove && npm run build:configs && npm run build:packages",
-    "build:remove": "rm -rf ./build",
+    "build": "npm run build:remove && npm run build:configs && npm run build:packages && npm run build:public-archives",
+    "build:remove": "rm -rf ./dist",
     "build:configs": "npx tsup",
     "build:packages": "npx tsx ./scripts/build-packages.ts",
+    "build:public-archives": "cp ./README.md ./dist && cp ./LICENSE ./dist",
     "commit:add": "git add .",
     "commit:detail": "cz",
     "commit:push": "git push",
