@@ -66,6 +66,8 @@ create ou alter `.vscode/settings.json`.
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+
+  // eslint >= 8.56.0 and < 9 add line on VSCode
   "eslint.experimental.useFlatConfig": true
 }
 ```
