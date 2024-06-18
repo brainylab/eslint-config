@@ -1,78 +1,78 @@
 {
-  "name": "@brainylab/eslint-config",
-  "version": "2.3.5",
-  "license": "MIT",
-  "type": "module",
-  "author": {
-    "name": "André Felipe Schulle",
-    "email": "dev@brainylab.com.br"
-  },
-  "bugs": {
-    "url": "https://github.com/brainylab/eslint-config/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/brainylab/eslint-config.git"
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "exports": "./index.js",
-  "keywords": [
-    "eslint",
-    "config",
-    "preset",
-    "brainylab"
-  ],
-  "description": "ESLint config for BrainyLab projects",
-  "scripts": {
-    "build": "npm run build:remove && npm run build:configs && npm run build:packages && npm run build:public-archives",
-    "build:remove": "rm -rf ./dist",
-    "build:configs": "npx tsup",
-    "build:packages": "npx tsx ./scripts/build-packages.ts",
-    "build:public-archives": "cp ./README.md ./dist && cp ./LICENSE ./dist",
-    "commit:add": "git add .",
-    "commit:detail": "cz",
-    "commit:push": "git push",
-    "commit": "pnpm commit:add && pnpm commit:detail && pnpm commit:push"
-  },
-  "dependencies": {
-    "@eslint/js": "9.4.0",
-    "eslint": "9.4.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-define-config": "2.1.0",
-    "eslint-plugin-import-x": "0.5.1",
-    "eslint-plugin-n": "17.9.0",
-    "globals": "15.4.0",
-    "typescript-eslint": "7.13.0"
-  },
-  "devDependencies": {
-    "@brainylab/prettier-config": "0.1.4",
-    "@types/eslint-config-prettier": "6.11.3",
-    "@types/eslint__js": "8.42.3",
-    "@types/node": "20.14.2",
-    "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "fast-glob": "3.3.2",
-    "tsup": "8.1.0",
-    "tsx": "4.15.4",
-    "typescript": "^5.4.5"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "peerDependencies": {
-    "eslint": ">=8.56.0",
-    "typescript": ">=4"
-  },
-  "peerDependenciesMeta": {
-    "typescript": {
-      "optional": true
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
+	"name": "@brainylab/eslint-config",
+	"version": "2.3.6",
+	"description": "ESLint config for BrainyLab projects",
+	"keywords": [
+		"eslint",
+		"config",
+		"preset",
+		"brainylab"
+	],
+	"bugs": {
+		"url": "https://github.com/brainylab/eslint-config/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brainylab/eslint-config.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "André Felipe Schulle",
+		"email": "dev@brainylab.com.br"
+	},
+	"type": "module",
+	"exports": "./index.js",
+	"main": "./index.js",
+	"module": "./index.js",
+	"types": "./index.d.ts",
+	"scripts": {
+		"build": "npm run build:remove && npm run build:configs && npm run build:packages && npm run build:public-archives",
+		"build:configs": "npx tsup",
+		"build:packages": "npx tsx ./scripts/build-packages.ts",
+		"build:public-archives": "cp ./README.md ./dist && cp ./LICENSE ./dist",
+		"build:remove": "rm -rf ./dist",
+		"commit": "pnpm commit:add && pnpm commit:detail && pnpm commit:push",
+		"commit:add": "git add .",
+		"commit:detail": "cz",
+		"commit:push": "git push"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"dependencies": {
+		"@eslint/js": "9.4.0",
+		"eslint": "9.4.0",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-define-config": "2.1.0",
+		"eslint-plugin-import-x": "0.5.1",
+		"eslint-plugin-n": "17.9.0",
+		"globals": "15.4.0",
+		"typescript-eslint": "7.13.0"
+	},
+	"devDependencies": {
+		"@brainylab/prettier-config": "0.2.4",
+		"@types/eslint-config-prettier": "6.11.3",
+		"@types/eslint__js": "8.42.3",
+		"@types/node": "20.14.2",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
+		"fast-glob": "3.3.2",
+		"tsup": "8.1.0",
+		"tsx": "4.15.4",
+		"typescript": "^5.4.5"
+	},
+	"peerDependencies": {
+		"eslint": ">=8.56.0",
+		"typescript": ">=4"
+	},
+	"peerDependenciesMeta": {
+		"typescript": {
+			"optional": true
+		}
+	},
+	"engines": {
+		"node": ">=18"
+	}
 }
