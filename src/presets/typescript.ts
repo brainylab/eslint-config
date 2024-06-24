@@ -14,6 +14,9 @@ const typescriptCore = tsEslint.config({
 			project: './tsconfig.json',
 			ecmaVersion: 'latest',
 			sourceType: 'module',
+			ecmaFeatures: {
+				jsx: true,
+			},
 		},
 	},
 	settings: {
@@ -35,7 +38,6 @@ const typescriptCore = tsEslint.config({
 		'**/coverage/**/*',
 		'**/dist/*',
 		'**/.next/**/*',
-		'**/*.d.ts',
 	],
 	rules: {
 		'@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
