@@ -1,6 +1,6 @@
 {
 	"name": "@brainylab/eslint-config",
-	"version": "2.4.1",
+	"version": "2.4.2",
 	"description": "ESLint config for BrainyLab projects",
 	"keywords": [
 		"eslint",

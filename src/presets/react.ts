@@ -24,7 +24,10 @@ export const react = [
 		},
 		rules: {
 			...pluginReact.configs.recommended.rules,
+			...pluginReact.configs['jsx-runtime'].rules,
 			...pluginReactHook.configs.recommended.rules,
+			'react/react-in-jsx-scope': 'off',
+			'react/jsx-uses-react': 'off',
 		},
 	},
 ];

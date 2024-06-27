@@ -23,13 +23,14 @@ create file eslint.config.js or EMS eslint.config.mjs in main project folder, ad
 ```js
 import { createConfig } from '@brainylab/eslint-config';
 export default createConfig({
-  configs: [
-    /* your custom config */
-  ],
-  presets: {
-    node: true,
-    typescript: true,
-  },
+	configs: [
+		/* your custom config */
+	],
+	presets: {
+		node: true,
+		typescript: true,
+		react: true,
+	},
 });
 ```
 
@@ -38,15 +39,17 @@ export default createConfig({
 ```javascript
 import { presets } from '@brainylab/eslint-config/configs';
 export default [
-  [
-    /* your custom config */
-  ],
-  // using base config
-  ...presets.base,
-  // using typescript config
-  ...presets.typescript,
-  // using typescript config
-  ...presets.node,
+	[
+		/* your custom config */
+	],
+	// using base config
+	...presets.base,
+	// using typescript config
+	...presets.typescript,
+	// using typescript config
+	...presets.node,
+	// using react config
+	...presets.react,
 ];
 ```
 
@@ -63,12 +66,12 @@ create ou alter `.vscode/settings.json`.
 
 ```json
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
 
-  // eslint >= 8.56.0 and < 9 add line on VSCode
-  "eslint.experimental.useFlatConfig": true
+	// eslint >= 8.56.0 and < 9 add line on VSCode
+	"eslint.experimental.useFlatConfig": true
 }
 ```
 
