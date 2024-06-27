@@ -12,16 +12,4 @@ export const next = [
 			'@next/next/no-html-link-for-pages': 'off',
 		},
 	},
-	{
-		files: [
-			'src/app/**/{page,layout,template}.tsx',
-			'*.config.{ts,js}',
-			'**/*.config.{ts,js}',
-			'*.d.ts',
-			'**/*.d.ts',
-		],
-		rules: {
-			'no-restricted-syntax': ['off', { selector: 'ExportDefaultDeclaration' }],
-		},
-	},
 ] as FlatESLintConfig[];

@@ -50,6 +50,11 @@ export const base = [
 					pathGroupsExcludedImportTypes: ['type'],
 				},
 			],
+		},
+	},
+	{
+		name: 'no default exports',
+		rules: {
 			'no-restricted-syntax': [
 				'error',
 				{
@@ -57,6 +62,19 @@ export const base = [
 					message: 'Prefer named exports',
 				},
 			],
+		},
+	},
+	{
+		name: 'no default exports exceptions',
+		files: [
+			'src/app/**/{page,layout,template}.tsx',
+			'*.config.{ts,js}',
+			'**/*.config.{ts,js}',
+			'*.d.ts',
+			'**/*.d.ts',
+		],
+		rules: {
+			'no-restricted-syntax': ['off', { selector: 'ExportDefaultDeclaration' }],
 		},
 	},
 	configPrettier,
