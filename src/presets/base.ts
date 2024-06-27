@@ -22,9 +22,6 @@ export const base = [
 		languageOptions: {
 			parserOptions: {
 				ecmaVersion: 'latest',
-				ecmaFeatures: {
-					jsx: true,
-				},
 				sourceType: 'module',
 			},
 			globals: {

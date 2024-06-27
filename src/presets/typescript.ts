@@ -2,7 +2,7 @@ import { tsEslint } from '../plugins';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
-const typeScriptExtensions = ['.ts', '.tsx'] as const;
+const typeScriptExtensions = ['.ts', '.tsx', 'd.ts'] as const;
 
 const allExtensions = [...typeScriptExtensions, '.js', '.jsx'] as const;
 
