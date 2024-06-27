@@ -1,9 +1,10 @@
 import globals from 'globals';
 
-import { pluginJsxA11y, pluginReact, pluginReactHook } from '../plugins';
+import { pluginReact, pluginReactHook } from '../plugins';
 
 export const react = [
 	{
+		files: ['*.jsx', '*.tsx'],
 		languageOptions: {
 			globals: { ...globals.browser, ...globals.node },
 			parserOptions: {
@@ -20,7 +21,6 @@ export const react = [
 		plugins: {
 			react: pluginReact,
 			'react-hooks': pluginReactHook,
-			'jsx-a11y': pluginJsxA11y,
 		},
 		rules: {
 			...pluginReact.configs.recommended.rules,
@@ -28,6 +28,7 @@ export const react = [
 			...pluginReactHook.configs.recommended.rules,
 			'react/react-in-jsx-scope': 'off',
 			'react/jsx-uses-react': 'off',
+			'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 		},
 	},
 ];

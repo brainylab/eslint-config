@@ -22,10 +22,6 @@ import * as _pluginReactHook from 'eslint-plugin-react-hooks';
 export const pluginReactHook: typeof import('eslint-plugin-react-hooks') =
 	interopDefault(_pluginReactHook);
 
-import * as _pluginJsxA11y from 'eslint-plugin-jsx-a11y';
-export const pluginJsxA11y: typeof import('eslint-plugin-jsx-a11y') =
-	interopDefault(_pluginJsxA11y);
-
 import * as _configPrettier from 'eslint-config-prettier';
 export const configPrettier: any = interopDefault(_configPrettier);
 

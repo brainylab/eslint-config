@@ -50,6 +50,13 @@ export const base = [
 					pathGroupsExcludedImportTypes: ['type'],
 				},
 			],
+			'no-restricted-syntax': [
+				'error',
+				{
+					selector: 'ExportDefaultDeclaration',
+					message: 'Prefer named exports',
+				},
+			],
 		},
 	},
 	configPrettier,
