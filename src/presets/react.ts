@@ -29,6 +29,7 @@ export const react = [
 			'react/react-in-jsx-scope': 'off',
 			'react/jsx-uses-react': 'off',
 			'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+			'react/no-unknown-property': ['error', { ignore: ['tw'] }],
 		},
 	},
 ];

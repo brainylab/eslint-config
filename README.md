@@ -30,6 +30,7 @@ export default createConfig({
 		node: true,
 		typescript: true,
 		react: true,
+		next: true,
 	},
 });
 ```
@@ -50,6 +51,8 @@ export default [
 	...presets.node,
 	// using react config
 	...presets.react,
+	// using react config
+	...presets.next,
 ];
 ```
 

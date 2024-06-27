@@ -7,7 +7,7 @@ export const next = [
 		},
 		rules: {
 			...pluginNext.configs.recommended.rules,
-			'react/no-unknown-property': ['error', { ignore: ['tw'] }],
+			'@next/next/no-html-link-for-pages': 'off',
 		},
 	},
 ];

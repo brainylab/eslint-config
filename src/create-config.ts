@@ -27,7 +27,7 @@ export function createConfig(params: ConfigParams): FlatESLintConfig[] {
 		configs.push(...node);
 	}
 
-	if (params.presets?.react) {
+	if (params.presets?.react || params.presets?.next) {
 		configs.push(...react);
 	}
 
