@@ -1,5 +1,7 @@
 import { pluginNext } from '../plugins';
 
+import type { FlatESLintConfig } from 'eslint-define-config';
+
 export const next = [
 	{
 		plugins: {
@@ -11,7 +13,6 @@ export const next = [
 		},
 	},
 	{
-		name: 'no default exports exceptions',
 		files: [
 			'src/app/**/{page,layout,template}.tsx',
 			'*.config.{ts,js}',
@@ -23,4 +24,4 @@ export const next = [
 			'no-restricted-syntax': ['off', { selector: 'ExportDefaultDeclaration' }],
 		},
 	},
-];
+] as FlatESLintConfig[];
