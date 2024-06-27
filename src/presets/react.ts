@@ -4,7 +4,7 @@ import { pluginReact, pluginReactHook } from '../plugins';
 
 export const react = [
 	{
-		files: ['*.jsx', '*.tsx'],
+		files: ['*.jsx', '*.tsx', '*.mdx'],
 		languageOptions: {
 			globals: { ...globals.browser, ...globals.node },
 			parserOptions: {
