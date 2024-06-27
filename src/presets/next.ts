@@ -10,4 +10,17 @@ export const next = [
 			'@next/next/no-html-link-for-pages': 'off',
 		},
 	},
+	{
+		name: 'no default exports exceptions',
+		files: [
+			'src/app/**/{page,layout,template}.tsx',
+			'*.config.{ts,js}',
+			'**/*.config.{ts,js}',
+			'*.d.ts',
+			'**/*.d.ts',
+		],
+		rules: {
+			'no-restricted-syntax': ['off', { selector: 'ExportDefaultDeclaration' }],
+		},
+	},
 ];
