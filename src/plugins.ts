@@ -22,6 +22,10 @@ import * as _pluginReactHook from 'eslint-plugin-react-hooks';
 export const pluginReactHook: typeof import('eslint-plugin-react-hooks') =
 	interopDefault(_pluginReactHook);
 
+import * as _pluginMdx from 'eslint-plugin-mdx';
+export const pluginMdx: typeof import('eslint-plugin-mdx') =
+	interopDefault(_pluginMdx);
+
 import * as _pluginNext from '@next/eslint-plugin-next';
 export const pluginNext: typeof import('@next/eslint-plugin-next') =
 	interopDefault(_pluginNext);
