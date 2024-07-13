@@ -3,7 +3,7 @@ name: CI - Publish Eslint Config
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   publish-grp:

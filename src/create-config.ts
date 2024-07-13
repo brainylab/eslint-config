@@ -3,7 +3,6 @@ import { typescript } from './presets/typescript';
 import { node } from './presets/node';
 import { react } from './presets/react';
 import { next } from './presets/next';
-import { mdx } from './presets/mdx';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
@@ -31,10 +30,6 @@ export function createConfig(params: ConfigParams): FlatESLintConfig[] {
 
 	if (params.presets?.react || params.presets?.next) {
 		configs.push(...react);
-	}
-
-	if ((params.presets?.react || params.presets?.next) && params.presets?.mdx) {
-		configs.push(...mdx);
 	}
 
 	if (params.presets?.next) {
