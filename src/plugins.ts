@@ -18,10 +18,6 @@ import * as _pluginReact from 'eslint-plugin-react';
 export const pluginReact: typeof import('eslint-plugin-react') =
 	interopDefault(_pluginReact);
 
-import * as _pluginReactHook from 'eslint-plugin-react-hooks';
-export const pluginReactHook: typeof import('eslint-plugin-react-hooks') =
-	interopDefault(_pluginReactHook);
-
 import * as _pluginNext from '@next/eslint-plugin-next';
 export const pluginNext: typeof import('@next/eslint-plugin-next') =
 	interopDefault(_pluginNext);

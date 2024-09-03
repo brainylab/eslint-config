@@ -1,6 +1,6 @@
 import globals from 'globals';
 
-import { pluginReact, pluginReactHook } from '../plugins';
+import { pluginReact } from '../plugins';
 
 export const react = [
 	{
@@ -20,12 +20,10 @@ export const react = [
 		},
 		plugins: {
 			react: pluginReact,
-			'react-hooks': pluginReactHook,
 		},
 		rules: {
 			...pluginReact.configs.recommended.rules,
 			...pluginReact.configs['jsx-runtime'].rules,
-			...pluginReactHook.configs.recommended.rules,
 			'react/react-in-jsx-scope': 'off',
 			'react/jsx-uses-react': 'off',
 			'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
