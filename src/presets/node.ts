@@ -26,6 +26,7 @@ export const node = [
 			'node/prefer-global/buffer': ['error', 'never'],
 			'node/prefer-global/process': ['error', 'never'],
 			'node/process-exit-as-throw': 'error',
+			'@typescript-eslint/no-empty-object-type': 'off',
 		},
 	},
 ] as FlatESLintConfig[];

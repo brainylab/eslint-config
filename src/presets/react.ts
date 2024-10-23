@@ -1,16 +1,15 @@
 import globals from 'globals';
+import reactPlugin from 'eslint-plugin-react';
 
-import { pluginReact } from '../plugins';
-
-export const react = [
+export const react: any[] = [
 	{
-		files: ['*.jsx', '*.tsx', '*.mdx'],
+		files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+		...reactPlugin.configs.flat?.recommended,
 		languageOptions: {
-			globals: { ...globals.browser, ...globals.node },
-			parserOptions: {
-				ecmaFeatures: {
-					jsx: true,
-				},
+			...reactPlugin.configs.flat?.recommended.languageOptions,
+			globals: {
+				...globals.serviceworker,
+				...globals.browser,
 			},
 		},
 		settings: {
@@ -18,12 +17,8 @@ export const react = [
 				version: 'detect',
 			},
 		},
-		plugins: {
-			react: pluginReact,
-		},
 		rules: {
-			...pluginReact.configs.recommended.rules,
-			...pluginReact.configs['jsx-runtime'].rules,
+			...reactPlugin.configs.flat?.recommended.rules,
 			'react/react-in-jsx-scope': 'off',
 			'react/jsx-uses-react': 'off',
 			'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],

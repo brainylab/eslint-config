@@ -14,13 +14,12 @@ import * as _pluginNode from 'eslint-plugin-n';
 export const pluginNode: typeof import('eslint-plugin-n') =
 	interopDefault(_pluginNode);
 
-import * as _pluginReact from 'eslint-plugin-react';
-export const pluginReact: typeof import('eslint-plugin-react') =
-	interopDefault(_pluginReact);
+// import * as _pluginReact from 'eslint-plugin-react';
+// export const pluginReact: typeof import('eslint-plugin-react') =
+// 	interopDefault(_pluginReact);
 
-import * as _pluginNext from '@next/eslint-plugin-next';
-export const pluginNext: typeof import('@next/eslint-plugin-next') =
-	interopDefault(_pluginNext);
+import pluginNext from '@next/eslint-plugin-next';
+export { pluginNext };
 
 import * as _configPrettier from 'eslint-config-prettier';
 export const configPrettier: any = interopDefault(_configPrettier);
@@ -28,4 +27,5 @@ export const configPrettier: any = interopDefault(_configPrettier);
 import tsEslint from 'typescript-eslint';
 export { tsEslint };
 
-export * as pluginImport from 'eslint-plugin-import-x';
+import * as pluginImport from 'eslint-plugin-import-x';
+export { pluginImport };

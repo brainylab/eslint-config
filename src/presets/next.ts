@@ -9,7 +9,9 @@ export const next = [
 		},
 		rules: {
 			...pluginNext.configs.recommended.rules,
+			...pluginNext.configs['core-web-vitals'].rules,
 			'@next/next/no-html-link-for-pages': 'off',
 		},
+		ignores: ['.next/*'],
 	},
 ] as FlatESLintConfig[];

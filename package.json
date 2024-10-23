@@ -1,6 +1,6 @@
 {
 	"name": "@brainylab/eslint-config",
-	"version": "2.7.0",
+	"version": "2.8.0",
 	"description": "ESLint config for BrainyLab projects",
 	"keywords": [
 		"eslint",
@@ -42,22 +42,23 @@
 		}
 	},
 	"dependencies": {
-		"@eslint/js": "9.9.1",
+		"@eslint/js": "9.13.0",
 		"@next/eslint-plugin-next": "15.0.0-rc.0",
-		"eslint": "9.9.1",
+		"eslint": "9.13.0",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-define-config": "2.1.0",
-		"eslint-plugin-import-x": "4.1.1",
-		"eslint-plugin-n": "17.9.0",
-		"eslint-plugin-react": "7.35.1",
-		"globals": "15.6.0",
-		"typescript-eslint": "8.4.0"
+		"eslint-plugin-import-x": "4.3.1",
+		"eslint-plugin-n": "17.11.1",
+		"eslint-plugin-react": "7.37.2",
+		"eslint-plugin-react-hooks": "5.0.0",
+		"globals": "15.11.0",
+		"typescript-eslint": "8.11.0"
 	},
 	"devDependencies": {
-		"@brainylab/prettier-config": "0.2.4",
+		"@brainylab/prettier-config": "1.0.1",
 		"@types/eslint-config-prettier": "6.11.3",
 		"@types/eslint__js": "8.42.3",
-		"@types/node": "20.14.9",
+		"@types/node": "22.7.9",
 		"commitizen": "4.3.0",
 		"cz-conventional-changelog": "3.3.0",
 		"fast-glob": "3.3.2",
@@ -74,7 +75,7 @@
 			"optional": true
 		}
 	},
-	"packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a",
+	"packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
 	"engines": {
 		"node": ">=18"
 	}
