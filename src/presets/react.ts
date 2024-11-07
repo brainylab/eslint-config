@@ -1,9 +1,10 @@
 import globals from 'globals';
 import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
 export const react: any[] = [
 	{
-		files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+		files: ['**/*.{jsx,tsx}'],
 		...reactPlugin.configs.flat?.recommended,
 		languageOptions: {
 			...reactPlugin.configs.flat?.recommended.languageOptions,
@@ -24,5 +25,19 @@ export const react: any[] = [
 			'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 			'react/no-unknown-property': ['error', { ignore: ['tw'] }],
 		},
+	},
+	{
+		files: ['**/*.{jsx,tsx}'],
+		languageOptions: {
+			ecmaVersion: 2020,
+			globals: globals.browser,
+			parserOptions: {
+				ecmaVersion: 'latest',
+				ecmaFeatures: { jsx: true },
+				sourceType: 'module',
+			},
+		},
+		settings: { react: { version: 'detect' } },
+		...reactHooksPlugin.configs['recommended-latest'],
 	},
 ];

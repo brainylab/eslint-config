@@ -14,10 +14,6 @@ import * as _pluginNode from 'eslint-plugin-n';
 export const pluginNode: typeof import('eslint-plugin-n') =
 	interopDefault(_pluginNode);
 
-// import * as _pluginReact from 'eslint-plugin-react';
-// export const pluginReact: typeof import('eslint-plugin-react') =
-// 	interopDefault(_pluginReact);
-
 import pluginNext from '@next/eslint-plugin-next';
 export { pluginNext };
 
