@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import globals from 'globals';
 import reactPlugin from 'eslint-plugin-react';
+// @ts-expect-error
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
 export const react: any[] = [
