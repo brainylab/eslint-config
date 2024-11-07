@@ -6,7 +6,7 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
 export const react: any[] = [
 	{
-		files: ['**/*.{jsx,tsx,mdx}'],
+		files: ['**/*.{jsx,tsx}'],
 		...reactPlugin.configs.flat?.recommended,
 		plugins: {
 			react: reactPlugin.configs.flat?.recommended.plugins.react,

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-expect-error
+// @ts-ignore
 import * as mdxEslint from 'eslint-plugin-mdx';
 
 export const mdx: any[] = [
