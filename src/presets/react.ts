@@ -4,8 +4,12 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
 export const react: any[] = [
 	{
-		files: ['**/*.{jsx,tsx}'],
+		files: ['**/*.{jsx,tsx,mdx}'],
 		...reactPlugin.configs.flat?.recommended,
+		plugins: {
+			react: reactPlugin.configs.flat?.recommended.plugins.react,
+			'react-hooks': reactHooksPlugin,
+		},
 		languageOptions: {
 			...reactPlugin.configs.flat?.recommended.languageOptions,
 			globals: {
@@ -24,20 +28,7 @@ export const react: any[] = [
 			'react/jsx-uses-react': 'off',
 			'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 			'react/no-unknown-property': ['error', { ignore: ['tw'] }],
+			...reactHooksPlugin.configs.recommended.rules,
 		},
-	},
-	{
-		files: ['**/*.{jsx,tsx}'],
-		languageOptions: {
-			ecmaVersion: 2020,
-			globals: globals.browser,
-			parserOptions: {
-				ecmaVersion: 'latest',
-				ecmaFeatures: { jsx: true },
-				sourceType: 'module',
-			},
-		},
-		settings: { react: { version: 'detect' } },
-		...reactHooksPlugin.configs['recommended-latest'],
 	},
 ];
