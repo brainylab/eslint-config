@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
 import pluginNext from '@next/eslint-plugin-next';
@@ -7,7 +8,7 @@ import { reactConfig } from '@brainylab/eslint-config-react';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
-export const next = [
+export const nextConfig = [
 	...baseConfig,
 	...typescriptConfig,
 	...reactConfig,
@@ -23,3 +24,5 @@ export const next = [
 		ignores: ['.next/*'],
 	},
 ] as FlatESLintConfig[];
+
+export default nextConfig;
