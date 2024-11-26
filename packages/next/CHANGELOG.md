@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-next
 
+## 3.0.4
+
+### Patch Changes
+
+- [#16](https://github.com/brainylab/eslint-config/pull/16) [`4fa0b2a`](https://github.com/brainylab/eslint-config/commit/4fa0b2a458f071406fda0e640dcca645e86a5f2b) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - fix export next configs
+
 ## 3.0.3
 
 ### Patch Changes
