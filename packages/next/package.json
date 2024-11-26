@@ -8,6 +8,10 @@
 		"config",
 		"next"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brainylab/eslint-config"
+	},
 	"license": "MIT",
 	"author": "André Felipe Schulle <andrefelipeschulle@icloud.com>",
 	"type": "module",
