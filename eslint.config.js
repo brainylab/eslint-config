@@ -1,9 +1,3 @@
-import { presets } from './dist/index.js';
+import { base } from './packages/base/dist/index.mjs';
 
-export default [
-	...presets.base,
-	...presets.typescript,
-	...presets.node,
-	...presets.react,
-	...presets.next,
-];
+export default [...base];

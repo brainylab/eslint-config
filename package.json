@@ -1,83 +1,35 @@
 {
 	"name": "@brainylab/eslint-config",
-	"version": "2.10.1",
+	"private": true,
 	"description": "ESLint config for BrainyLab projects",
-	"keywords": [
-		"eslint",
-		"config",
-		"preset",
-		"brainylab"
-	],
-	"bugs": {
-		"url": "https://github.com/brainylab/eslint-config/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/brainylab/eslint-config.git"
-	},
-	"license": "MIT",
-	"author": {
-		"name": "André Felipe Schulle",
-		"email": "dev@brainylab.com.br"
-	},
 	"type": "module",
-	"exports": "./index.js",
-	"main": "./index.js",
-	"module": "./index.js",
-	"types": "./index.d.ts",
 	"scripts": {
-		"build": "npm run build:remove && npm run build:configs && npm run build:packages && npm run build:public-archives",
-		"build:configs": "npx tsup",
-		"build:packages": "npx tsx ./scripts/build-packages.ts",
-		"build:public-archives": "cp ./README.md ./dist && cp ./LICENSE ./dist",
-		"build:remove": "rm -rf ./dist",
-		"commit": "pnpm commit:add && pnpm commit:detail && pnpm commit:push",
+		"build": "turbo build",
+		"changeset": "changeset && node scripts/validate-changeset.js",
+		"commit": "pnpm commit:add && pnpm commit:create && pnpm commit:push",
 		"commit:add": "git add .",
-		"commit:detail": "cz",
-		"commit:push": "git push"
+		"commit:create": "cz",
+		"commit:push": "git push",
+		"release": "changeset publish",
+		"version": "changeset version"
 	},
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
 	},
-	"dependencies": {
-		"@eslint/js": "9.13.0",
-		"@next/eslint-plugin-next": "15.0.0-rc.0",
-		"eslint": "9.13.0",
-		"eslint-config-prettier": "9.1.0",
-		"eslint-define-config": "2.1.0",
-		"eslint-plugin-import-x": "4.3.1",
-		"eslint-plugin-mdx": "3.1.5",
-		"eslint-plugin-n": "17.11.1",
-		"eslint-plugin-react": "7.37.2",
-		"eslint-plugin-react-hooks": "5.1.0-rc-66855b96-20241106",
-		"globals": "15.11.0",
-		"typescript-eslint": "8.11.0"
-	},
 	"devDependencies": {
 		"@brainylab/prettier-config": "1.0.1",
-		"@types/eslint-config-prettier": "6.11.3",
-		"@types/eslint__js": "8.42.3",
-		"@types/node": "22.7.9",
+		"@changesets/changelog-github": "0.5.0",
+		"@changesets/cli": "2.27.10",
+		"@changesets/get-release-plan": "4.0.5",
+		"@changesets/types": "6.0.0",
+		"@types/node": "22.10.0",
 		"commitizen": "4.3.0",
 		"cz-conventional-changelog": "3.3.0",
-		"fast-glob": "3.3.2",
-		"tsup": "8.1.0",
-		"tsx": "4.15.7",
-		"typescript": "5.5.2"
+		"rimraf": "6.0.1",
+		"tsup": "8.3.5",
+		"turbo": "2.3.1"
 	},
-	"peerDependencies": {
-		"eslint": ">=9.0.0",
-		"typescript": ">=4"
-	},
-	"peerDependenciesMeta": {
-		"typescript": {
-			"optional": true
-		}
-	},
-	"packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
-	"engines": {
-		"node": ">=18"
-	}
+	"packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }

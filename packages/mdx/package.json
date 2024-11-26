@@ -1,0 +1,35 @@
+{
+	"name": "@brainylab/eslint-config-mdx",
+	"version": "3.0.0",
+	"description": "ESLint mdx config",
+	"keywords": [
+		"brainylab",
+		"eslint",
+		"config",
+		"mdx"
+	],
+	"license": "MIT",
+	"author": "André Felipe Schulle <andrefelipeschulle@icloud.com>",
+	"type": "module",
+	"main": "./src/index.ts",
+	"files": [
+		"dist",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "rimraf dist && tsup --dts",
+		"clean": "rimraf dist .turbo",
+		"prepack": "clean-package",
+		"postpack": "clean-package restore",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"eslint": "9.15.0",
+		"eslint-define-config": "2.1.0",
+		"eslint-plugin-mdx": "3.1.5"
+	},
+	"devDependencies": {
+		"clean-package": "2.2.0"
+	},
+	"clean-package": "../clean-package.config.json"
+}

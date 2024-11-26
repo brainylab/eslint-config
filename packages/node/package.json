@@ -1,0 +1,38 @@
+{
+	"name": "@brainylab/eslint-config-node",
+	"version": "3.0.0",
+	"description": "ESLint node config",
+	"keywords": [
+		"brainylab",
+		"eslint",
+		"config",
+		"node"
+	],
+	"license": "MIT",
+	"author": "André Felipe Schulle <andrefelipeschulle@icloud.com>",
+	"type": "module",
+	"main": "./src/index.ts",
+	"files": [
+		"dist",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "rimraf dist && tsup --dts",
+		"clean": "rimraf dist .turbo",
+		"prepack": "clean-package",
+		"postpack": "clean-package restore",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@brainylab/eslint-config-base": "workspace:*",
+		"@brainylab/eslint-config-typescript": "workspace:*",
+		"eslint": "9.15.0",
+		"eslint-define-config": "2.1.0",
+		"eslint-plugin-n": "17.14.0",
+		"globals": "15.12.0"
+	},
+	"devDependencies": {
+		"clean-package": "2.2.0"
+	},
+	"clean-package": "../clean-package.config.json"
+}

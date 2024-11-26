@@ -1,0 +1,88 @@
+name: QA
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: build all packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout branch
+        uses: actions/checkout@v4
+
+      - name: install packages
+        uses: ./.github/common-actions/install
+
+      - name: build packages
+        run: pnpm build
+
+  # tests:
+  #   name: test all packages
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout branch
+  #       uses: actions/checkout@v4
+
+  #     - name: install packages
+  #       uses: ./.github/common-actions/install
+  #       env:
+  #         GHP_PACKAGES_TOKEN: ${{ secrets.GHP_PACKAGES_TOKEN }}
+
+  #     - name: run tests
+  #       run: pnpm test
+  #       env:
+  #         GHP_PACKAGES_TOKEN: ${{ secrets.GHP_PACKAGES_TOKEN }}
+
+  # eslint:
+  #   name: lint all packages
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout branch
+  #       uses: actions/checkout@v4
+
+  #     - name: install packages
+  #       uses: ./.github/common-actions/install
+  #       env:
+  #         GHP_PACKAGES_TOKEN: ${{ secrets.GHP_PACKAGES_TOKEN }}
+
+  #     - name: Run ESLint
+  #       run: pnpm lint
+  #       env:
+  #         GHP_PACKAGES_TOKEN: ${{ secrets.GHP_PACKAGES_TOKEN }}
+
+  # types:
+  #   name: typecheck all packages
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout branch
+  #       uses: actions/checkout@v4
+
+  #     - name: install packages
+  #       uses: ./.github/common-actions/install
+  #       env:
+  #         GHP_PACKAGES_TOKEN: ${{ secrets.GHP_PACKAGES_TOKEN }}
+
+  #     - name: run typecheck
+  #       run: pnpm typecheck
+  #       env:
+  #         GHP_PACKAGES_TOKEN: ${{ secrets.GHP_PACKAGES_TOKEN }}
+
+  # prettier:
+  #   name: Prettier
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout branch
+  #       uses: actions/checkout@v4
+
+  #     - name: install packages
+  #       uses: ./.github/common-actions/install
+  #       env:
+  #         GHP_PACKAGES_TOKEN: ${{ secrets.GHP_PACKAGES_TOKEN }}
+
+  #     - name: Run prettier
+  #       run: pnpm format:check
+  #       env:
+  #         GHP_PACKAGES_TOKEN: ${{ secrets.GHP_PACKAGES_TOKEN }}

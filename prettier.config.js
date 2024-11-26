@@ -1,3 +1,5 @@
-import prettierConfig from "@brainylab/prettier-config";
+import prettierConfig from '@brainylab/prettier-config';
 
-export default prettierConfig;
+export default {
+	...prettierConfig,
+};
