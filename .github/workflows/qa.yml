@@ -29,6 +29,9 @@ jobs:
       - name: install packages
         uses: ./.github/common-actions/install
 
+      - name: Run Build
+        run: pnpm build
+
       - name: Run ESLint
         run: pnpm lint
 
