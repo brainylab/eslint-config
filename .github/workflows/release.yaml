@@ -7,13 +7,17 @@ on:
       - 'packages/**'
     branches:
       - main
+permissions:
+  contents: write
+  id-token: write
+  pull-requests: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  release:
-    name: Release
+  release-npm:
+    name: Release to NPM
     runs-on: ubuntu-latest
     steps:
       - name: checkout branch
@@ -25,7 +29,12 @@ jobs:
       - name: build packages
         run: pnpm build
 
-      - name: create release pull request or publish to GRP
+      - name: npm package registry authentication
+        run: npm set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: create release pull request or publish to NPM
         id: changesets
         uses: changesets/action@v1
         with:
@@ -34,5 +43,35 @@ jobs:
           commit: 'ci(changesets): version packages'
           setupGitUser: false
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  release-grp:
+    name: Release to GRP
+    runs-on: ubuntu-latest
+    needs: release-npm
+    steps:
+      - name: checkout branch
+        uses: actions/checkout@v4
+
+      - name: Git fetch tags
+        run: git fetch --tags origin
+
+      - name: install and configure git
+        uses: ./.github/common-actions/install
+
+      - name: build packages
+        run: pnpm build
+
+      - name: tests
+        run: pnpm test
+
+      - name: get package registry GRP
+        run: npm config set registry https://npm.pkg.github.com
+
+      - name: github package registry authentication
+        run: npm set //npm.pkg.github.com/:_authToken=${{ secrets.GHP_PACKAGES_TOKEN }}
+
+      - name: publish packages on GRP
+        run: pnpm run release

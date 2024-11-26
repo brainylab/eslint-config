@@ -10,7 +10,10 @@
 		"commit:add": "git add .",
 		"commit:create": "cz",
 		"commit:push": "git push",
+		"format:check": "prettier --check packages/**/src --cache",
+		"lint": "eslint ./packages/**/src/*.ts",
 		"release": "changeset publish",
+		"typecheck": "turbo typecheck",
 		"version": "changeset version"
 	},
 	"config": {
