@@ -36,5 +36,9 @@
 	"devDependencies": {
 		"clean-package": "2.2.0"
 	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
 	"clean-package": "../clean-package.config.json"
 }
