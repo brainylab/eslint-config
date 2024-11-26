@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-base
 
+## 3.0.2
+
+### Patch Changes
+
+- [#10](https://github.com/brainylab/eslint-config/pull/10) [`8560c33`](https://github.com/brainylab/eslint-config/commit/8560c33796657cf4d62eb3bf9de380cb9f78c8a7) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - update ci
+
 ## 3.0.1
 
 ### Patch Changes

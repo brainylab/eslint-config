@@ -1,6 +1,6 @@
 {
 	"name": "@brainylab/eslint-config-react",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"description": "ESLint react config",
 	"keywords": [
 		"brainylab",
