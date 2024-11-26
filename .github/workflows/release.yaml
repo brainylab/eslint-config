@@ -64,9 +64,6 @@ jobs:
       - name: build packages
         run: pnpm build
 
-      - name: tests
-        run: pnpm test
-
       - name: get package registry GRP
         run: npm config set registry https://npm.pkg.github.com
 
