@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-mdx
 
+## 3.0.3
+
+### Patch Changes
+
+- [#14](https://github.com/brainylab/eslint-config/pull/14) [`f9d6500`](https://github.com/brainylab/eslint-config/commit/f9d65002b50966fc3ec8e625dffed57014db3827) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - fix changeset config and clean package
+
 ## 3.0.2
 
 ### Patch Changes
