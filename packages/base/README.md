@@ -1,4 +1,4 @@
-## BrainyLab eslint-config
+## BrainyLab eslint-config-base
 
 this is the base configuration of ESLint is used in the Projects made by BrainyLab Development.
 
@@ -6,13 +6,13 @@ this is the base configuration of ESLint is used in the Projects made by BrainyL
 
 ```bash
 # npm
-npm i --save-dev eslint prettier @brainylab/eslint-config
+npm i --save-dev eslint prettier @brainylab/eslint-config-base
 
 #yarn
-yarn add -D eslint prettier @brainylab/eslint-config
+yarn add -D eslint prettier @brainylab/eslint-config-base
 
 #pnpm
-pnpm add -D eslint prettier @brainylab/eslint-config
+pnpm add -D eslint prettier @brainylab/eslint-config-base
 ```
 
 ## Usage Flat Config - ESlint 9+
@@ -21,39 +21,10 @@ Require Node.js >= 18.18, and ESLint >= 8.56.0.
 create file eslint.config.js or EMS eslint.config.mjs in main project folder, add the lines below in the file.
 
 ```js
-import { createConfig } from '@brainylab/eslint-config';
-export default createConfig({
-	configs: [
-		/* your custom config */
-	],
-	presets: {
-		node: true,
-		typescript: true,
-		react: true,
-		next: true,
-	},
-});
-```
-
-### Presets
-
-```javascript
-import { presets } from '@brainylab/eslint-config/configs';
+import { base } from '@brainylab/eslint-config-base';
 export default [
-	[
-		/* your custom config */
-	],
-	// using base config
-	...presets.base,
-	// using typescript config
-	...presets.typescript,
-	// using typescript config
-	...presets.node,
-	// using react config
-	...presets.react,
-	// using react config
-	...presets.next,
-];
+  ...base
+]
 ```
 
 #### Config Prettier

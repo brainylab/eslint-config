@@ -12,5 +12,6 @@
 		"esModuleInterop": true,
 		"skipLibCheck": true
 	},
-	"include": ["src"]
+	"include": ["./packages"],
+	"exclude": ["node_modules", "**/node_modules"]
 }
