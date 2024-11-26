@@ -1,12 +1,12 @@
 {
-	"name": "@brainylab/eslint-config-base",
+	"name": "@brainylab/eslint-config-react",
 	"version": "3.0.0",
-	"description": "ESLint base config",
+	"description": "ESLint react config",
 	"keywords": [
 		"brainylab",
 		"eslint",
 		"config",
-		"base"
+		"react"
 	],
 	"license": "MIT",
 	"author": "André Felipe Schulle <andrefelipeschulle@icloud.com>",
@@ -24,11 +24,12 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@eslint/js": "9.15.0",
+		"@brainylab/eslint-config-base": "workspace:*",
+		"@brainylab/eslint-config-typescript": "workspace:*",
 		"eslint": "9.15.0",
-		"eslint-config-prettier": "9.1.0",
 		"eslint-define-config": "2.1.0",
-		"eslint-plugin-import-x": "4.4.3",
+		"eslint-plugin-react": "7.37.2",
+		"eslint-plugin-react-hooks": "5.0.0",
 		"globals": "15.12.0"
 	},
 	"devDependencies": {

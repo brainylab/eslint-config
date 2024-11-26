@@ -1,12 +1,12 @@
 {
-	"name": "@brainylab/eslint-config-base",
+	"name": "@brainylab/eslint-config-mdx",
 	"version": "3.0.0",
-	"description": "ESLint base config",
+	"description": "ESLint mdx config",
 	"keywords": [
 		"brainylab",
 		"eslint",
 		"config",
-		"base"
+		"mdx"
 	],
 	"license": "MIT",
 	"author": "André Felipe Schulle <andrefelipeschulle@icloud.com>",
@@ -24,12 +24,9 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@eslint/js": "9.15.0",
 		"eslint": "9.15.0",
-		"eslint-config-prettier": "9.1.0",
 		"eslint-define-config": "2.1.0",
-		"eslint-plugin-import-x": "4.4.3",
-		"globals": "15.12.0"
+		"eslint-plugin-mdx": "3.1.5"
 	},
 	"devDependencies": {
 		"clean-package": "2.2.0"

@@ -1,18 +1,18 @@
-## BrainyLab eslint-config-base
+## BrainyLab eslint-config-mdx
 
-this is the base configuration of ESLint is used in the Projects made by BrainyLab Development.
+this is the mdx configuration of ESLint is used in the Projects made by BrainyLab Development.
 
 ## Install Config
 
 ```bash
 # npm
-npm i --save-dev eslint prettier @brainylab/eslint-config-base
+npm i --save-dev eslint prettier @brainylab/eslint-config-mdx
 
 #yarn
-yarn add -D eslint prettier @brainylab/eslint-config-base
+yarn add -D eslint prettier @brainylab/eslint-config-mdx
 
 #pnpm
-pnpm add -D eslint prettier @brainylab/eslint-config-base
+pnpm add -D eslint prettier @brainylab/eslint-config-mdx
 ```
 
 ## Usage Flat Config - ESlint 9+
@@ -21,9 +21,13 @@ Require Node.js >= 18.18, and ESLint >= 8.56.0.
 create file eslint.config.js or EMS eslint.config.mjs in main project folder, add the lines below in the file.
 
 ```js
-import { baseConfig } from '@brainylab/eslint-config-base';
+import { reactConfig } from '@brainylab/eslint-config-react';
+import { mdxConfig } from '@brainylab/eslint-config-mdx';
 
-export default baseConfig
+export default [
+  ...reactConfig // or nextConfig,
+  ...mdxConfig
+  ]
 ```
 
 #### Config Prettier
