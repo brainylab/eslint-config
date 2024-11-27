@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-mdx
 
+## 3.1.1
+
+### Patch Changes
+
+- [`ae70dc2`](https://github.com/brainylab/eslint-config/commit/ae70dc27f89249706dd93d841801eddb476a4d2a) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - add files prop on createConfigMdx
+
 ## 3.1.0
 
 ### Minor Changes
