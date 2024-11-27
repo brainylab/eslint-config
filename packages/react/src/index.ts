@@ -4,12 +4,10 @@ import globals from 'globals';
 import reactPlugin from 'eslint-plugin-react';
 // @ts-expect-error
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import baseEslintConfig from '@brainylab/eslint-config-base';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
 export const reactConfig = [
-	...baseEslintConfig,
 	{
 		files: ['**/*.{jsx,tsx}'],
 		...reactPlugin.configs.flat?.recommended,

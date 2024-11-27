@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 
 import tsEslint from 'typescript-eslint';
+import baseEslintConfig from '@brainylab/eslint-config-base';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
@@ -66,6 +67,7 @@ export const createTypescriptConfig = (params?: createTypescriptConfig) => {
 	});
 
 	return [
+		...baseEslintConfig,
 		...typescriptCore,
 		{
 			files: ['**/*.d.ts'],

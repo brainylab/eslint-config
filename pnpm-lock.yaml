@@ -129,9 +129,6 @@ importers:
 
   packages/react:
     dependencies:
-      '@brainylab/eslint-config-base':
-        specifier: workspace:*
-        version: link:../base
       eslint:
         specifier: 9.15.0
         version: 9.15.0(jiti@1.21.6)
@@ -154,6 +151,9 @@ importers:
 
   packages/typescript:
     dependencies:
+      '@brainylab/eslint-config-base':
+        specifier: workspace:*
+        version: link:../base
       eslint:
         specifier: 9.15.0
         version: 9.15.0(jiti@1.21.6)

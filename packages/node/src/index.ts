@@ -3,12 +3,10 @@
 import globals from 'globals';
 // @ts-ignore
 import * as pluginNode from 'eslint-plugin-n';
-import baseEslintConfig from '@brainylab/eslint-config-base';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
 const nodeConfig = [
-	...baseEslintConfig,
 	{
 		plugins: {
 			node: pluginNode,

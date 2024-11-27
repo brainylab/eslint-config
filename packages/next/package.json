@@ -28,7 +28,6 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@brainylab/eslint-config-base": "workspace:*",
 		"@brainylab/eslint-config-react": "workspace:*",
 		"@next/eslint-plugin-next": "15.0.3",
 		"eslint": "9.15.0",
