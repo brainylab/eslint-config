@@ -30,7 +30,6 @@
 	"dependencies": {
 		"@brainylab/eslint-config-base": "workspace:*",
 		"@brainylab/eslint-config-react": "workspace:*",
-		"@brainylab/eslint-config-typescript": "workspace:*",
 		"@next/eslint-plugin-next": "15.0.3",
 		"eslint": "9.15.0",
 		"eslint-define-config": "2.1.0"

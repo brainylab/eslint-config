@@ -5,13 +5,11 @@ import reactPlugin from 'eslint-plugin-react';
 // @ts-expect-error
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import baseEslintConfig from '@brainylab/eslint-config-base';
-import typescriptEslintConfig from '@brainylab/eslint-config-typescript';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
 export const reactConfig = [
 	...baseEslintConfig,
-	...typescriptEslintConfig,
 	{
 		files: ['**/*.{jsx,tsx}'],
 		...reactPlugin.configs.flat?.recommended,
