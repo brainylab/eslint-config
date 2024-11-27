@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-typescript
 
+## 3.1.4
+
+### Patch Changes
+
+- [`da8d47d`](https://github.com/brainylab/eslint-config/commit/da8d47de39cf766cd03b99deef85a5a9eabf31e0) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - create function createTypescriptConfig
+
 ## 3.1.3
 
 ### Patch Changes
