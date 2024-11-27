@@ -13,15 +13,20 @@ const allExtensions = [...typeScriptExtensions, '.js', '.jsx'] as const;
 
 type TypescriptConfig = {
 	tsProjectPath?: string;
+	tsProjectRoot?: string;
 };
 
 function getDirName(path: string) {
-	return dirname(fileURLToPath(path));
+	if (path.startsWith('file://')) {
+		return dirname(fileURLToPath(path));
+	}
+
+	return path;
 }
 
 export const createTypescriptConfig = (props?: TypescriptConfig) => {
-	const tsconfigRootDir = props?.tsProjectPath
-		? getDirName(props.tsProjectPath)
+	const tsconfigRootDir = props?.tsProjectRoot
+		? getDirName(props.tsProjectRoot)
 		: './';
 
 	const typescriptCore = tsEslint.config({
@@ -30,7 +35,9 @@ export const createTypescriptConfig = (props?: TypescriptConfig) => {
 		languageOptions: {
 			parserOptions: {
 				parser: tsEslint.parser,
-				project: './tsconfig.json',
+				project: props?.tsProjectPath
+					? props?.tsProjectPath
+					: './tsconfig.json',
 				tsconfigRootDir: tsconfigRootDir,
 				ecmaVersion: 'latest',
 				sourceType: 'module',

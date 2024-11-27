@@ -3,5 +3,8 @@ import { createTypescriptConfig } from './packages/typescript/dist/index.js';
 
 export default [
 	...baseConfig,
-	...createTypescriptConfig({ tsProjectPath: import.meta.url }),
+	...createTypescriptConfig({
+		tsFilePath:
+			'/Users/andrefelipeschulle/Developer/brainylab/libs/eslint-config/tsconfig.json',
+	}),
 ];
