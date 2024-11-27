@@ -1,6 +1,6 @@
 {
 	"name": "@brainylab/eslint-config-base",
-	"version": "3.1.1",
+	"version": "3.1.2",
 	"description": "ESLint base config",
 	"keywords": [
 		"brainylab",
