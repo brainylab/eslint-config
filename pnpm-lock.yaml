@@ -85,9 +85,6 @@ importers:
 
   packages/next:
     dependencies:
-      '@brainylab/eslint-config-base':
-        specifier: workspace:*
-        version: link:../base
       '@brainylab/eslint-config-react':
         specifier: workspace:*
         version: link:../react
@@ -107,9 +104,6 @@ importers:
 
   packages/node:
     dependencies:
-      '@brainylab/eslint-config-base':
-        specifier: workspace:*
-        version: link:../base
       eslint:
         specifier: 9.15.0
         version: 9.15.0(jiti@1.21.6)
