@@ -5,23 +5,31 @@ import * as mdxEslint from 'eslint-plugin-mdx';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
-export const mdxConfig = [
-	{
-		files: ['**/*.mdx'],
-		...mdxEslint.flat,
-		processor: mdxEslint.createRemarkProcessor({
-			lintCodeBlocks: true,
-			languageMapper: {},
-		}),
-	},
-	{
-		...mdxEslint.flatCodeBlocks,
-		rules: {
-			...mdxEslint.flatCodeBlocks.rules,
-			'no-var': 'error',
-			'prefer-const': 'error',
+type MDXConfig = {
+	files?: string[];
+};
+
+export const createMdxConfig = (props?: MDXConfig) => {
+	return [
+		{
+			...props?.files,
+			...mdxEslint.flat,
+			processor: mdxEslint.createRemarkProcessor({
+				lintCodeBlocks: true,
+				languageMapper: {},
+			}),
 		},
-	},
-] as FlatESLintConfig[];
+		{
+			...mdxEslint.flatCodeBlocks,
+			rules: {
+				...mdxEslint.flatCodeBlocks.rules,
+				'no-var': 'error',
+				'prefer-const': 'error',
+			},
+		},
+	] as FlatESLintConfig[];
+};
+
+export const mdxConfig = createMdxConfig();
 
 export default mdxConfig;
