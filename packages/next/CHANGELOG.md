@@ -1,5 +1,12 @@
 # @brainylab/eslint-config-next
 
+## 3.1.2
+
+### Patch Changes
+
+- Updated dependencies [[`9c7fd73`](https://github.com/brainylab/eslint-config/commit/9c7fd737d0fffcbf8f0ccd25775bfff3c70778ed)]:
+  - @brainylab/eslint-config-react@3.1.2
+
 ## 3.1.1
 
 ### Patch Changes

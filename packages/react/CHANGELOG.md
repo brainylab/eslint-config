@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-react
 
+## 3.1.2
+
+### Patch Changes
+
+- [`9c7fd73`](https://github.com/brainylab/eslint-config/commit/9c7fd737d0fffcbf8f0ccd25775bfff3c70778ed) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - disabled rule react/prop-types on react
+
 ## 3.1.1
 
 ### Patch Changes
