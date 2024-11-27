@@ -1,5 +1,16 @@
 # @brainylab/eslint-config-next
 
+## 3.2.0
+
+### Minor Changes
+
+- [`58c4ec6`](https://github.com/brainylab/eslint-config/commit/58c4ec6aeab380b3dd54afdb47238e71fec21853) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - removido config-base dos pacotes react,next,node e movido para o typescript, agora tem felixibilidade para configurar o typescript ou não
+
+### Patch Changes
+
+- Updated dependencies [[`58c4ec6`](https://github.com/brainylab/eslint-config/commit/58c4ec6aeab380b3dd54afdb47238e71fec21853)]:
+  - @brainylab/eslint-config-react@3.2.0
+
 ## 3.1.3
 
 ### Patch Changes
