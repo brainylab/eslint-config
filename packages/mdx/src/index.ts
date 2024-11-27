@@ -27,6 +27,12 @@ export const createMdxConfig = (props?: MDXConfig) => {
 				'prefer-const': 'error',
 			},
 		},
+		{
+			files: ['**/*.mdx'],
+			rules: {
+				'no-restricted-syntax': 'off',
+			},
+		},
 	] as FlatESLintConfig[];
 };
 

@@ -67,6 +67,8 @@ export const createTypescriptConfig = (props?: TypescriptConfig) => {
 			'**/coverage/**/*',
 			'**/dist/*',
 			'**/.next/**/*',
+			'**/*.mdx/**.ts',
+			'**/*.mdx/**.tsx',
 		],
 		rules: {
 			'@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
