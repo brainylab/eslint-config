@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-typescript
 
+## 3.1.1
+
+### Patch Changes
+
+- [`fbb7d50`](https://github.com/brainylab/eslint-config/commit/fbb7d508209e447438c764cdba92b373b7dc7e55) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - add option ts project path
+
 ## 3.1.0
 
 ### Minor Changes
