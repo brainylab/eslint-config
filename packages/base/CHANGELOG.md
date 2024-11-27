@@ -1,5 +1,15 @@
 # @brainylab/eslint-config-base
 
+## 3.1.0
+
+### Minor Changes
+
+- [#18](https://github.com/brainylab/eslint-config/pull/18) [`54c05e7`](https://github.com/brainylab/eslint-config/commit/54c05e773be783dc9726cc22112e8f18d97532cd) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - removido biblioteca do typescript como padrão do react,next e node, configurar manualmente
+
+### Patch Changes
+
+- [#20](https://github.com/brainylab/eslint-config/pull/20) [`15d9a84`](https://github.com/brainylab/eslint-config/commit/15d9a8426c2891393c2eb0bd76e27913d29c0e40) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - update
+
 ## 3.0.3
 
 ### Patch Changes
