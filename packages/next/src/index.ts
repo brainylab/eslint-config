@@ -3,14 +3,12 @@
 // @ts-ignore
 import pluginNext from '@next/eslint-plugin-next';
 import { baseConfig } from '@brainylab/eslint-config-base';
-import { typescriptConfig } from '@brainylab/eslint-config-typescript';
 import { reactConfig } from '@brainylab/eslint-config-react';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
 export const nextConfig = [
 	...baseConfig,
-	...typescriptConfig,
 	...reactConfig,
 	{
 		plugins: {
