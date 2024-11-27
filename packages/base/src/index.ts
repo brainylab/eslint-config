@@ -79,7 +79,6 @@ export const baseConfig = [
 			'*.config.{ts,js,mjs,cjs}',
 			'**/*.config.{ts,js,mjs,cjs}',
 			'*.d.ts',
-			'*.mdx',
 			'**/*.d.ts',
 		],
 		rules: {

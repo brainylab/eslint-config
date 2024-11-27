@@ -12,6 +12,7 @@ type MDXConfig = {
 export const createMdxConfig = (props?: MDXConfig) => {
 	return [
 		{
+			files: ['**/*.mdx'],
 			...props?.files,
 			...mdxEslint.flat,
 			processor: mdxEslint.createRemarkProcessor({
