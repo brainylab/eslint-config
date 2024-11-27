@@ -37,6 +37,10 @@
 	"devDependencies": {
 		"clean-package": "2.2.0"
 	},
+	"peerDependencies": {
+		"eslint": ">=9",
+		"typescript": ">=5"
+	},
 	"publishConfig": {
 		"access": "public",
 		"provenance": true
