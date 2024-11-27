@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-typescript
 
+## 3.1.2
+
+### Patch Changes
+
+- [`3bb8103`](https://github.com/brainylab/eslint-config/commit/3bb81031dda130f4499c747ee9fff881d40e2477) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - update rules
+
 ## 3.1.1
 
 ### Patch Changes
