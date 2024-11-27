@@ -35,6 +35,7 @@ export const reactConfig = [
 			'react/jsx-uses-react': 'off',
 			'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 			'react/no-unknown-property': ['error', { ignore: ['tw'] }],
+			'react/prop-types': 'off',
 			...reactHooksPlugin.configs.recommended.rules,
 		},
 	},
