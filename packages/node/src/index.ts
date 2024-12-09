@@ -6,7 +6,7 @@ import * as pluginNode from 'eslint-plugin-n';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
-const nodeConfig = [
+export const nodeConfig = [
 	{
 		plugins: {
 			node: pluginNode,
