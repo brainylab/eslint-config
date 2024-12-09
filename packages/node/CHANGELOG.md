@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-node
 
+## 3.2.1
+
+### Patch Changes
+
+- [`9dcde00`](https://github.com/brainylab/eslint-config/commit/9dcde00455d52bf49cabfa22c2d03b59d6f86eab) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - adiciono export name nodeConfig
+
 ## 3.2.0
 
 ### Minor Changes
