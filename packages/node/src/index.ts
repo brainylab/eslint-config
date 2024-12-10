@@ -1,33 +1,29 @@
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import globals from 'globals';
-// @ts-ignore
-import * as pluginNode from 'eslint-plugin-n';
+import pluginNode from 'eslint-plugin-n';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
 
 export const nodeConfig = [
+	pluginNode.configs['flat/recommended-script'],
 	{
-		plugins: {
-			node: pluginNode,
-		},
 		languageOptions: {
 			globals: {
 				...globals.node,
 			},
 		},
-		settings: {},
 		rules: {
 			'no-useless-constructor': 'off',
-			'node/handle-callback-err': ['error', '^(err|error)$'],
-			'node/no-deprecated-api': 'error',
-			'node/no-exports-assign': 'error',
-			'node/no-new-require': 'error',
-			'node/no-path-concat': 'error',
-			'node/no-unsupported-features/es-builtins': 'error',
-			'node/prefer-global/buffer': ['error', 'never'],
-			'node/prefer-global/process': ['error', 'never'],
-			'node/process-exit-as-throw': 'error',
+			'n/handle-callback-err': ['error', '^(err|error)$'],
+			'n/no-deprecated-api': 'error',
+			'n/no-exports-assign': 'error',
+			'n/no-new-require': 'error',
+			'n/no-path-concat': 'error',
+			'n/no-unsupported-features/es-builtins': 'error',
+			'n/prefer-global/buffer': ['error', 'never'],
+			'n/prefer-global/process': ['error', 'never'],
+			'n/process-exit-as-throw': 'error',
 			'@typescript-eslint/no-empty-object-type': 'off',
 		},
 	},

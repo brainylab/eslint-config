@@ -15,7 +15,7 @@
 	"license": "MIT",
 	"author": "André Felipe Schulle <andrefelipeschulle@icloud.com>",
 	"type": "module",
-	"main": "./src/index.ts",
+	"main": "./dist/index.js",
 	"files": [
 		"dist",
 		"LICENSE"

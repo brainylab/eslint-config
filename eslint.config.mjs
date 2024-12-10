@@ -1,10 +1,4 @@
-import { baseConfig } from './packages/base/dist/index.js';
-import { createTypescriptConfig } from './packages/typescript/dist/index.js';
+import { typescriptConfig } from './packages/typescript/dist/index.js';
+import { nodeConfig } from './packages/node/dist/index.js';
 
-export default [
-	...baseConfig,
-	...createTypescriptConfig({
-		tsFilePath:
-			'/Users/andrefelipeschulle/Developer/brainylab/libs/eslint-config/tsconfig.json',
-	}),
-];
+export default [...typescriptConfig, ...nodeConfig];
