@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-node
 
+## 3.2.2
+
+### Patch Changes
+
+- [`29d244f`](https://github.com/brainylab/eslint-config/commit/29d244f76ad23ae8e12766273f7b781f97cb6ac4) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - corrigido importação das novas configs do eslint-config-n
+
 ## 3.2.1
 
 ### Patch Changes

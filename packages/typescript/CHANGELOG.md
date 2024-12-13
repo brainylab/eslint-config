@@ -1,5 +1,12 @@
 # @brainylab/eslint-config-typescript
 
+## 3.2.1
+
+### Patch Changes
+
+- Updated dependencies [[`29d244f`](https://github.com/brainylab/eslint-config/commit/29d244f76ad23ae8e12766273f7b781f97cb6ac4)]:
+  - @brainylab/eslint-config-base@3.1.3
+
 ## 3.2.0
 
 ### Minor Changes
