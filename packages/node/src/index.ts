@@ -15,6 +15,7 @@ export const nodeConfig = [
 		},
 		rules: {
 			'no-useless-constructor': 'off',
+			'n/no-missing-import': 'off',
 			'n/handle-callback-err': ['error', '^(err|error)$'],
 			'n/no-deprecated-api': 'error',
 			'n/no-exports-assign': 'error',
