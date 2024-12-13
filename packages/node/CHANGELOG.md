@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-node
 
+## 3.2.3
+
+### Patch Changes
+
+- [`82f7536`](https://github.com/brainylab/eslint-config/commit/82f7536d4d4686b24ad74ee0dc26a466968e91c7) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - desativado n/no-missing-import no eslint node
+
 ## 3.2.2
 
 ### Patch Changes
