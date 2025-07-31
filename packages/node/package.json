@@ -28,10 +28,10 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"eslint": "9.15.0",
+		"eslint": "9.32.0",
 		"eslint-define-config": "2.1.0",
-		"eslint-plugin-n": "17.14.0",
-		"globals": "15.12.0"
+		"eslint-plugin-n": "17.21.3",
+		"globals": "16.3.0"
 	},
 	"devDependencies": {
 		"clean-package": "2.2.0"

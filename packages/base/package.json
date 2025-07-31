@@ -28,12 +28,12 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@eslint/js": "9.15.0",
-		"eslint": "9.15.0",
-		"eslint-config-prettier": "9.1.0",
+		"@eslint/js": "9.32.0",
+		"eslint": "9.32.0",
+		"eslint-config-prettier": "10.1.8",
 		"eslint-define-config": "2.1.0",
-		"eslint-plugin-import-x": "4.4.3",
-		"globals": "15.12.0"
+		"eslint-plugin-import-x": "4.16.1",
+		"globals": "16.3.0"
 	},
 	"devDependencies": {
 		"clean-package": "2.2.0"
