@@ -1,8 +1,7 @@
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import globals from 'globals';
 import reactPlugin from 'eslint-plugin-react';
-// @ts-expect-error
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
 import type { FlatESLintConfig } from 'eslint-define-config';
