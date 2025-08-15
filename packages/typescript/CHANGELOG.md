@@ -1,5 +1,14 @@
 # @brainylab/eslint-config-typescript
 
+## 3.2.2
+
+### Patch Changes
+
+- [`74553b2`](https://github.com/brainylab/eslint-config/commit/74553b275469bc1948f16b07807ff83e1b6a596d) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - chore: update pnpm workspace configuration to specify only built dependencies
+
+- Updated dependencies [[`74553b2`](https://github.com/brainylab/eslint-config/commit/74553b275469bc1948f16b07807ff83e1b6a596d)]:
+  - @brainylab/eslint-config-base@3.1.4
+
 ## 3.2.1
 
 ### Patch Changes
