@@ -1,5 +1,13 @@
 # @brainylab/eslint-config-typescript
 
+## 3.2.4
+
+### Patch Changes
+
+- [`ebf7682`](https://github.com/brainylab/eslint-config/commit/ebf768216786e3298df8e081d3e84fdc7ad22117) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - update params
+
+- [`5a027ba`](https://github.com/brainylab/eslint-config/commit/5a027ba8c7881e16dd322359eb3007cdba0b1cb1) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - update params
+
 ## 3.2.3
 
 ### Patch Changes
