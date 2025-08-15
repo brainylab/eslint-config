@@ -1,5 +1,11 @@
 # @brainylab/eslint-config-mdx
 
+## 3.1.5
+
+### Patch Changes
+
+- [`74553b2`](https://github.com/brainylab/eslint-config/commit/74553b275469bc1948f16b07807ff83e1b6a596d) Thanks [@andrefelipeschulle](https://github.com/andrefelipeschulle)! - chore: update pnpm workspace configuration to specify only built dependencies
+
 ## 3.1.4
 
 ### Patch Changes
