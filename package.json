@@ -5,11 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "turbo build",
-		"changeset": "changeset && node scripts/validate-changeset.js",
-		"commit": "pnpm commit:add && pnpm commit:create && pnpm commit:push",
-		"commit:add": "git add .",
-		"commit:create": "cz",
-		"commit:push": "git push",
+		"changeset": "changeset",
 		"format:check": "prettier --check packages/**/src --cache",
 		"lint": "eslint ./packages/**/src/*.ts",
 		"release": "changeset publish",
@@ -22,15 +18,16 @@
 		}
 	},
 	"devDependencies": {
-		"@brainylab/prettier-config": "1.1.0",
+		"@brainylab/prettier-config": "1.2.0",
 		"@changesets/changelog-github": "0.5.1",
 		"@changesets/cli": "2.29.5",
 		"@changesets/get-release-plan": "4.0.13",
 		"@changesets/types": "6.1.0",
 		"@types/node": "24.1.0",
+		"prettier-plugin-curly": "0.3.2",
+		"prettier-plugin-packagejson": "2.5.19",
 		"rimraf": "6.0.1",
 		"tsup": "8.3.5",
 		"turbo": "2.5.5"
-	},
-	"packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+	}
 }
